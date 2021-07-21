@@ -1,0 +1,38 @@
+.header{
+    width: 100%;
+    height: 2rem;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    padding: 0.5rem 0;
+    margin-bottom: 1rem;
+    box-shadow: 0 5px 3px 0 hsl(0, 0%, 68%)	;
+    top:0;
+    background-color: hsl(0,0%, 100%);
+}
+.userOption{
+    position:absolute ;
+    width:20vw;
+    background: hsl(0deg 0% 99%);
+    top: 3rem;
+    padding: 1rem;
+    cursor: pointer;
+}
+.userOption:hover{
+    text-decoration: underline;
+}
+.logoImg{
+    width: 32px;
+    padding:0 0.5rem ;
+    cursor: pointer;
+}
+@media(min-width:480px){
+    .userOption{
+        right: 0;
+    }
+}
+@media(max-width:480px){
+    .userOption{
+        width: 100vw;
+    }
+}

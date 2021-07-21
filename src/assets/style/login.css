@@ -1,0 +1,47 @@
+
+  .Login {
+    border-radius: 1rem;
+    width:max-content;
+    padding: 5rem ;
+    border-top: 1px solid hsl(178, 60%, 55%);
+    border-bottom: 1px solid hsl(178, 60%, 55%);
+  }
+  .login-wrapper{
+    display: flex;
+    height: 100vh;
+    flex-direction: row;
+    align-items: center;
+  }
+  .login-logo-img{
+    width: 30vh;
+    height: auto;
+  }
+  .hiringFont{
+    font-family: fantasy;
+    font-size: 1.5rem;
+    width: 22vw;
+    text-align: center;
+  }
+
+  @media (max-width: 480px) {
+    .Login {
+        padding: 1rem;
+    }
+    .font2x{
+      font-size: 0.8rem;
+    } 
+  }
+  @media (max-width:768px) {
+    .login-wrapper{
+      flex-direction: column;
+      margin: auto;
+    }
+    .Login{
+      margin: auto;
+      margin-top: 4rem;
+    }
+    .font2x{
+      font-size: 1rem;
+    } 
+    
+  }
