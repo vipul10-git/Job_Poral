@@ -21,10 +21,13 @@
 .userOption:hover{
     text-decoration: underline;
 }
-.logoImg{
+.logoImg,.user-logo-img{
     width: 32px;
     padding:0 0.5rem ;
     cursor: pointer;
+}
+.user-logo-img{
+    border-radius: 50%;
 }
 @media(min-width:480px){
     .userOption{

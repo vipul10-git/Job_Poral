@@ -8,7 +8,8 @@ const Input = (props) => {
         placeholder,
         onChange,
         onClick,
-        autoFocus 
+        autoFocus,
+        maxlength
     } = props
     return (
         <input
@@ -19,8 +20,9 @@ const Input = (props) => {
             onChange = {onChange}
             onClick = {onClick}
             autoFocus = {autoFocus}
+            maxLength = {maxlength}
         />
     );
 }
 
-export default Input;
+export default React.memo(Input);

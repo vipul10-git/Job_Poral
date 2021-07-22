@@ -9,37 +9,47 @@ import { useHistory } from "react-router-dom";
 
 export default function ListingPage() {
     const [appliedList, setApplyList] = useState([]);
+    const [userData, setUserData] = useState({});
+
     let history = useHistory();
     useEffect(() => {
-        if(!localStorage.getItem("email")){
+        if(!sessionStorage.getItem("email")){
            history.push("/")
+        }
+        let userEmail = sessionStorage.getItem("email");
+        let userStoredData = localStorage.getItem(userEmail);
+        userStoredData = JSON.parse(userStoredData)
+        setUserData(userStoredData)
+        console.log(userStoredData)
+        if('appliedList' in userStoredData){
+            setApplyList(userStoredData.appliedList)
         }
     }, [])
 
     function apply(id) {
-        if (appliedList.indexOf(id) >= 0) {
-            let idAfterRemoved = appliedList.filter(function (item) {
-                return item !== id
-            })
-            setApplyList(idAfterRemoved)
-        } else {
+        if (appliedList.indexOf(id) <= 0) {
             setApplyList([...appliedList, id])
+            localStorage.setItem(userData.email,JSON.stringify({...userData,appliedList : [...appliedList,id]}))
         }
     }
 
     const logout =()=>{
-        localStorage.clear();
-        history.push('/login')
+        sessionStorage.clear();
+        history.replace('/login')
+    }
+
+    const toProfile =()=>{
+        history.replace('/user-profile')
     }
 
     return (
         <React.Fragment>
-            <Header logout={logout}/>
+            <Header logout={logout} toProfile={toProfile} userImg = {userData.userImg}/>
         <div className="listing-wrapper">
             {Data.length > 0 && Data.map((i) => {
-                let appliedText = { text: "Apply", bColor: "hsl(0, 0%, 100%)", border: "1px solid hsl(178, 60%, 55%)", color: "hsl(178, 60%, 55%)" }
+                let appliedText = { text: "Apply", bColor: "hsl(0, 0%, 100%)", border: "1px solid hsl(203deg, 85%, 52%)", color: "hsl(203deg, 85%, 52%)" }
                 if (appliedList.length > 0 && appliedList.indexOf(i.id) >= 0) {
-                    appliedText = { text: "Applied", bColor: "hsl(178, 60%, 55%)", border: "none", color: "hsl(0, 0%, 100%)" }
+                    appliedText = { text: "Applied", bColor: "hsl(203deg, 85%, 52%)", border: "none", color: "hsl(0, 0%, 100%)" }
                 }
                 return (
                     <div key={i.id} className="listing flex-row content-space-between displayFlex align-center">

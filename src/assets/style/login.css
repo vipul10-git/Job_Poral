@@ -3,8 +3,8 @@
     border-radius: 1rem;
     width:max-content;
     padding: 5rem ;
-    border-top: 1px solid hsl(178, 60%, 55%);
-    border-bottom: 1px solid hsl(178, 60%, 55%);
+    border-top: 1px solid hsl(203deg, 85%, 52%);
+    border-bottom: 1px solid hsl(203deg, 85%, 52%);
   }
   .login-wrapper{
     display: flex;
@@ -22,11 +22,16 @@
     width: 22vw;
     text-align: center;
   }
-
+  .user-img{
+    width: 60px;
+    border-radius: 50%;
+  }
+  input[type="checkbox" i]{
+    width: 0.8rem;
+    height: 0.8rem;
+    margin-bottom: 0.5rem;
+  }
   @media (max-width: 480px) {
-    .Login {
-        padding: 1rem;
-    }
     .font2x{
       font-size: 0.8rem;
     } 
@@ -38,10 +43,13 @@
     }
     .Login{
       margin: auto;
-      margin-top: 4rem;
+      margin-top: 0;
+      padding: 1rem;
     }
     .font2x{
       font-size: 1rem;
     } 
-    
+    .hiringFont{
+      width: 90vw;
+    }
   }

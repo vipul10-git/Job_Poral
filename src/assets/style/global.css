@@ -25,7 +25,7 @@ input{
 }
 input:focus{
   outline: none;
-  border: 1px solid hsl(178, 60%, 55%);
+  border: 1px solid hsl(203deg, 85%, 52%);
 }
 .mB1{
   margin-bottom: 1rem;
@@ -62,6 +62,16 @@ input:focus{
 }
 .textCenter{
   text-align: center;
+}
+.dummyImage{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: 0 0 3px 0 hsl(203deg, 85%, 52%);
+  font-size: 0.5rem;
+  display: grid;
+  place-items: center;
+  cursor: pointer;;
 }
 @media (max-width:480px){
   body{
