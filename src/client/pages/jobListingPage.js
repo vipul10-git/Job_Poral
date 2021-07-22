@@ -1,22 +1,38 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import Button from "../components/button";
 import "../../assets/style/listingPage.css";
 import Bag from "../../assets/img/bag.png";
 import LocationIcon from "../../assets/img/location.png";
-import { Data, language } from "../util/constants";
+import { language } from "../util/constants";
 import Header from "../components/header";
 import { useHistory } from "react-router-dom";
 import LanguageSearch from '../components/languageSearch';
+import { useDispatch } from 'react-redux';
+import Container from '../../container/container';
+import { apiCall } from '../../action/action';
 
 export default function ListingPage() {
     const [appliedList, setApplyList] = useState([]);
     const [userData, setUserData] = useState({});
     const [selectedLangList, setSelectedSortList] = useState([]);
-    const [jobData, setJobData] = useState(Data);
+    const [jobData, setJobData] = useState([]);
+    const [totalData, setTotalItem] = useState(0);
     const [showFilterTab, setShowFiltertab] = useState(false);
     const [selectedSalaryFilter, setSelectedSalaryFilter] = useState(0);
+    const [paginationPosi, setPosition] = useState(200)
+    const { jobDataSet, totalItem } = Container();
 
     let history = useHistory();
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(apiCall(200));
+    }, [dispatch])
+
+    useEffect(() => {
+        setJobData(jobDataSet);
+        setTotalItem(totalItem)
+      }, [jobDataSet,totalItem])
 
     useEffect(() => {
         if (!sessionStorage.getItem("email")) {
@@ -50,7 +66,7 @@ export default function ListingPage() {
     const selecteListFilter = (i) => {
         let filteredSearchData = [];
         let filteredData = [];
-        let dataSet = [...Data];
+        let dataSet = [...jobDataSet];
         if (selectedLangList.indexOf(i) !== -1) {
             filteredSearchData = selectedLangList.filter(lang => lang !== i)
             setSelectedSalaryFilter(0)
@@ -62,22 +78,19 @@ export default function ListingPage() {
         if (filteredSearchData.length > 0) {
             dataSet.forEach(element => {
                 for (let i = 0; i < filteredSearchData.length; i++) {
-                    if (element.skills_required.includes(filteredSearchData[i])) {
+                    if (element.skills.includes(filteredSearchData[i])) {
                         filteredData.push(element)
                     }
                 }
             })
             setJobData([...new Set(filteredData)]);
         } else {
-            setJobData(Data)
-
+            setJobData(jobDataSet)
         }
-
     }
 
     const selectSalaryFilter = (input) => {
-        let dataSet = [...Data];
-        console.log(selectedSalaryFilter)
+        let dataSet = [...jobDataSet];
         if (input === selectedSalaryFilter) {
             setSelectedSalaryFilter(0);
         } else {
@@ -90,6 +103,34 @@ export default function ListingPage() {
         }
         setSelectedSortList([])
         setJobData(dataSet)
+    }
+
+    const getnextSetdata = (position) =>{
+        setPosition(position)
+        dispatch(apiCall(position))
+    }
+
+    const pagination = () => {
+        let paginationUI = [];
+        let i=1
+        while(i<totalData){
+            paginationUI.push(i);
+            i=i+200;
+        }
+        return paginationUI.map((i)=>{
+            return(
+                <Button
+                    border='1px solid hsl(203deg, 85%, 52%)'
+                    bColor='hsl(0, 0%, 100%)'
+                    onClick={() => getnextSetdata(i)}
+                    radius="1rem"
+                    padding="0.2rem 1rem"
+                    color='hsl(203deg, 85%, 52%)'
+                    margin='0.5rem 0.5rem 0 0'
+                    children={i}
+                />
+            )
+        })
     }
 
     return (
@@ -107,7 +148,7 @@ export default function ListingPage() {
                 />}
                 {showFilterTab && <LanguageSearch showFilterTab={() => setShowFiltertab(false)} language={language} selecteListFilter={selecteListFilter} selectedList={selectedLangList} selectedSalaryFilter={selectedSalaryFilter} selectSalaryFilter={selectSalaryFilter} />}
 
-                {jobData.length > 0 && jobData.map((i) => {
+                {jobData && jobData.length > 0 && jobData.map((i) => {
                     let appliedText = { text: "Apply", bColor: "hsl(0, 0%, 100%)", border: "1px solid hsl(203deg, 85%, 52%)", color: "hsl(203deg, 85%, 52%)" }
                     if (appliedList.length > 0 && appliedList.indexOf(i.id) >= 0) {
                         appliedText = { text: "Applied", bColor: "hsl(203deg, 85%, 52%)", border: "none", color: "hsl(0, 0%, 100%)" }
@@ -157,6 +198,7 @@ export default function ListingPage() {
                         </div>
                     )
                 })}
+                {pagination()}
             </div>
         </React.Fragment>
     );
