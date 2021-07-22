@@ -10,32 +10,34 @@
     top:0;
     background-color: hsl(0,0%, 100%);
 }
-.userOption{
-    position:absolute ;
-    width:20vw;
+.profileOption{
+    position:fixed ;
+    width:10vw;
     background: hsl(0deg 0% 99%);
     top: 3rem;
     padding: 1rem;
     cursor: pointer;
-}
-.userOption:hover{
-    text-decoration: underline;
+    box-shadow: 0 5px 3px 0 hsl(0, 0%, 68%)	;
+    box-sizing: border-box;
 }
 .logoImg,.user-logo-img{
     width: 32px;
     padding:0 0.5rem ;
     cursor: pointer;
 }
+.profileOption-list:hover{
+    text-decoration: underline;
+}
 .user-logo-img{
     border-radius: 50%;
 }
 @media(min-width:480px){
-    .userOption{
+    .profileOption{
         right: 1rem;
     }
 }
 @media(max-width:480px){
-    .userOption{
+    .profileOption{
         width: 100vw;
     }
 }

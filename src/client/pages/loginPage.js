@@ -33,18 +33,18 @@ export default function LoginPage() {
             setError("password")
             return;
         }
-        if(localStorage.getItem(email)){
+        if (localStorage.getItem(email)) {
             let userData = JSON.parse(localStorage.getItem(email));
-            if(userData.password === password){
-                sessionStorage.setItem('email',email)
+            if (userData.password === password) {
+                sessionStorage.setItem('email', email)
                 history.replace("/job-listing");
-            }else{
+            } else {
                 setError('password')
-            }    
+            }
             return;
         }
         setUi(2);
-        localStorage.setItem(email, JSON.stringify([{email : email,password:password}]));
+        localStorage.setItem(email, JSON.stringify([{ email: email, password: password }]));
     }
 
     function submitForm() {
@@ -61,15 +61,15 @@ export default function LoginPage() {
         let additionalData = {
             userImg,
             linkedIn,
-            githubAccName : githubAccName,
+            githubAccName: githubAccName,
             gitProjSelected,
             mobile,
             name,
             collegeInfo
         }
-        data = {...data[0],...additionalData};
-        sessionStorage.setItem('email',email)
-        localStorage.setItem(email,JSON.stringify(data))  
+        data = { ...data[0], ...additionalData };
+        sessionStorage.setItem('email', email)
+        localStorage.setItem(email, JSON.stringify(data))
         history.replace("/job-listing");
     }
 
@@ -80,15 +80,13 @@ export default function LoginPage() {
     }
 
     const apicall = (data) => {
-        fetch(`https://api.github.com/users/${data}/repos`).
-            then(resp => resp.json()).
-            then(res => {
-                let data = []
-                res.length > 0 && res.forEach(element => {
-                    data.push({ name: element.full_name, gitUrl: element.html_url })
-                });
-                setGitHubAcc(data)
-            })
+        fetch(`https://api.github.com/users/${data}/repos`).then(resp => resp.json()).then(res => {
+            let data = []
+            res.length > 0 && res.forEach(element => {
+                data.push({ name: element.full_name, gitUrl: element.html_url })
+            });
+            setGitHubAcc(data)
+        })
     }
 
     const opneImageBox = () => {
@@ -156,8 +154,8 @@ export default function LoginPage() {
                 {ui === 2 && <Fragment>
                     <div>
                         <input type="file" accept="image/*" name="image" ref={inputFile} id="file" onChange={loadFile} style={{ display: "none" }} />
-                        {userImg.length > 0 && <img src={userImg} id="imgId" alt="user-img" className="user-img" onClick={() => opneImageBox()}/>}
-                        {userImg.length <=0 && <div className="dummyImage" onClick={() => opneImageBox()}>Uplad image</div>}
+                        {userImg.length > 0 && <img src={userImg} id="imgId" alt="user-img" className="user-img" onClick={() => opneImageBox()} />}
+                        {userImg.length <= 0 && <div className="dummyImage" onClick={() => opneImageBox()}>Uplad image</div>}
                     </div>
                     <div className="mB1 displayFlex">
                         <label className="flex1">Name</label>

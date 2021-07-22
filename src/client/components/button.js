@@ -10,7 +10,8 @@ const Button = (props)=> {
         radius,
         color,
         width,
-        height
+        height,
+        margin,
       } = props
   return (
     <button 
@@ -23,6 +24,7 @@ const Button = (props)=> {
          color,
          width,
          height,
+         margin,
          boxShadow:"0 0 3px 0 bColor"
       }}
     >
