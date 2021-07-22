@@ -82,9 +82,9 @@ export default function ListingPage() {
             setSelectedSalaryFilter(0);
         } else {
             if (input === 1) {
-                dataSet.sort((i, j) => i.Salary - j.Salary)
+                dataSet.sort((i, j) => i.Sal - j.Sal)
             } else if (input === 2) {
-                dataSet.sort((i, j) => j.Salary - i.Salary)
+                dataSet.sort((i, j) => j.Sal - i.Sal)
             }
             setSelectedSalaryFilter(input)
         }
@@ -115,7 +115,7 @@ export default function ListingPage() {
                     return (
                         <div key={i.id} className="listing flex-row content-space-between displayFlex align-center">
                             <div className="displayFlex flex-column flex3">
-                                <span className="mB1">{i.comapny} - {i.skills_required}
+                                <span className="mB1">{i.company} - {i.skills.join(', ')}
                                     {window.innerWidth < 780 && <div style={{ float: "right" }}>
                                         <Button
                                             border={appliedText.border}
@@ -133,13 +133,13 @@ export default function ListingPage() {
                                 <div className="displayFlex content-space-between">
                                     <div className="flex1">
                                         <img className='bag-icon' src={Bag} alt="bag" />
-                                        <span className="subText"> &nbsp;{i.experience}-{i.experience + 3} yrs</span>
+                                        <span className="subText"> &nbsp;{i.exp}-{i.exp + 3} yrs</span>
                                     </div>
                                     <div className="flex1">
                                         <img className='loc-icon' src={LocationIcon} alt="location" />
-                                        <span className="subText ellpise"> {i.location}</span>
+                                        <span className="subText ellpise"> {i.loc}</span>
                                     </div>
-                                    <span className="subText flex1 textCenter">{i.date_posted}</span>
+                                    <span className="subText flex1 textCenter">&#8377; {i.Sal}</span>
                                 </div>
                             </div>
                             {window.innerWidth > 780 &&
