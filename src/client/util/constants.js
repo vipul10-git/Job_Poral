@@ -1,902 +1,904 @@
 export const Data = [
-    {
-		"comapny": "CARBORUNIV",
-		"salary": 90899160,
-		"skills_required": "Css",
-		"location": "Ozherelye",
-		"date_posted": "Mar 11, 2022",
+	{
+		"comapny": "BGRENERGY",
+		"Salary": 9674663,
+		"skills_required": "PHP, GO, Objective-C",
+		"location": "Grimbergen",
+		"date_posted": "Sep 2,2020",
 		"id": 1,
-		"experience": 6
+		"experience": 11
 	},
 	{
-		"comapny": "BFUTILITIE",
-		"salary": 67295869,
-		"skills_required": "JavaScript",
-		"location": "Arrah",
-		"date_posted": "Sep 22,2021",
+		"comapny": "BHARTISHIP",
+		"Salary": 3393042,
+		"skills_required": "PHP",
+		"location": "Ansfelden",
+		"date_posted": "Jul 13,2021",
 		"id": 2,
-		"experience": 15
+		"experience": 5
 	},
 	{
-		"comapny": "Sibelius",
-		"salary": 77353693,
-		"skills_required": "GO",
-		"location": "San Lazzaro di Savena",
-		"date_posted": "Dec 7,2021",
+		"comapny": "K",
+		"Salary": 58047991,
+		"skills_required": "Java, VEU",
+		"location": "Overrepen",
+		"date_posted": "Jan 10,2022",
 		"id": 3,
 		"experience": 15
 	},
 	{
-		"comapny": "Chami",
-		"salary": 8425686,
-		"skills_required": "Ruby",
-		"location": "Newport News",
-		"date_posted": "Aug 22,2020",
+		"comapny": "Google",
+		"Salary": 78572664,
+		"skills_required": "VEU, Css",
+		"location": "Birkenhead",
+		"date_posted": "Nov 4,2021",
 		"id": 4,
-		"experience": 13
-	},
-	{
-		"comapny": "Macromedia",
-		"salary": 87000701,
-		"skills_required": "Java",
-		"location": "South Portland",
-		"date_posted": "Oct 31,2021",
-		"id": 5,
-		"experience": 11
-	},
-	{
-		"comapny": "ABGSHIP",
-		"salary": 85368018,
-		"skills_required": "Ruby",
-		"location": "Mazy",
-		"date_posted": "Aug 16,2021",
-		"id": 6,
-		"experience": 13
-	},
-	{
-		"comapny": "BHARATRA",
-		"salary": 51455802,
-		"skills_required": "ANGULAR",
-		"location": "Nagpur",
-		"date_posted": "Jan 9,2021",
-		"id": 7,
-		"experience": 11
-	},
-	{
-		"comapny": "BHARATFORG",
-		"salary": 96561179,
-		"skills_required": "Ruby",
-		"location": "Bankura",
-		"date_posted": "Sep 8,2020",
-		"id": 8,
 		"experience": 9
 	},
 	{
-		"comapny": "GESHIP",
-		"salary": 50096876,
-		"skills_required": "C++",
-		"location": "Doues",
-		"date_posted": "Mar 31, 2022",
-		"id": 9,
-		"experience": 13
+		"comapny": "Yahoo",
+		"Salary": 56731573,
+		"skills_required": "C, ANGULAR, GO",
+		"location": "Fermont",
+		"date_posted": "May 3,2021",
+		"id": 5,
+		"experience": 5
 	},
 	{
-		"comapny": "ABGSHIP",
-		"salary": 92853007,
-		"skills_required": "GO",
-		"location": "Sint-Amandsberg",
-		"date_posted": "Aug 1,2021",
-		"id": 10,
-		"experience": 15
+		"comapny": "CAN",
+		"Salary": 34471073,
+		"skills_required": "",
+		"location": "Davangere",
+		"date_posted": "Nov 10,2020",
+		"id": 6,
+		"experience": 5
 	},
 	{
-		"comapny": "Microsoft",
-		"salary": 71253447,
-		"skills_required": "Css",
-		"location": "Morpeth",
-		"date_posted": "Apr 2,2021",
-		"id": 11,
+		"comapny": "CANDC",
+		"Salary": 19338423,
+		"skills_required": "HTML",
+		"location": "Quarona",
+		"date_posted": "Feb 28,2022",
+		"id": 7,
+		"experience": 5
+	},
+	{
+		"comapny": "BHARTIARTL",
+		"Salary": 55009435,
+		"skills_required": "",
+		"location": "Barcelona",
+		"date_posted": "Dec 8,2020",
+		"id": 8,
 		"experience": 12
 	},
 	{
 		"comapny": "Lycos",
-		"salary": 27330133,
-		"skills_required": "GO",
-		"location": "Dro",
-		"date_posted": "Dec 5,2021",
-		"id": 12,
-		"experience": 4
+		"Salary": 99327613,
+		"skills_required": "GO, Ruby",
+		"location": "El Retorno",
+		"date_posted": "Jun 5,2021",
+		"id": 9,
+		"experience": 8
 	},
 	{
-		"comapny": "BHARTISHIP",
-		"salary": 61573401,
-		"skills_required": "PYTHON",
-		"location": "Sahiwal",
-		"date_posted": "Sep 27,2020",
-		"id": 13,
-		"experience": 15
+		"comapny": "3MINDIA",
+		"Salary": 22520277,
+		"skills_required": "",
+		"location": "Dorgali",
+		"date_posted": "Jul 5,2022",
+		"id": 10,
+		"experience": 1
 	},
 	{
-		"comapny": "BHARATFORG",
-		"salary": 63602294,
-		"skills_required": "PHP",
-		"location": "Lolol",
-		"date_posted": "Jun 4, 2022",
-		"id": 14,
+		"comapny": "Sibelius",
+		"Salary": 10796320,
+		"skills_required": "",
+		"location": "Moxhe",
+		"date_posted": "Nov 11,2021",
+		"id": 11,
 		"experience": 11
 	},
 	{
-		"comapny": "Macromedia",
-		"salary": 21004391,
-		"skills_required": "Css",
-		"location": "Izmir",
-		"date_posted": "Feb 23, 2022",
+		"comapny": "K",
+		"Salary": 32326340,
+		"skills_required": "SQL",
+		"location": "Terni",
+		"date_posted": "Sep 25,2020",
+		"id": 12,
+		"experience": 1
+	},
+	{
+		"comapny": "3MINDIA",
+		"Salary": 40486769,
+		"skills_required": "",
+		"location": "Krishnanagar",
+		"date_posted": "Oct 1,2020",
+		"id": 13,
+		"experience": 8
+	},
+	{
+		"comapny": "K",
+		"Salary": 23910614,
+		"skills_required": "Objective-C, SQL",
+		"location": "Teltow",
+		"date_posted": "Oct 23,2021",
+		"id": 14,
+		"experience": 3
+	},
+	{
+		"comapny": "CANFINHOME",
+		"Salary": 93670727,
+		"skills_required": "PHP, Java",
+		"location": "Le Grand-Quevilly",
+		"date_posted": "Mar 14,2021",
 		"id": 15,
 		"experience": 7
 	},
 	{
-		"comapny": "BHARATFORG",
-		"salary": 52066367,
-		"skills_required": "SQL",
-		"location": "Ikot Ekpene",
-		"date_posted": "Feb 13, 2022",
+		"comapny": "BGRENERGY",
+		"Salary": 92732176,
+		"skills_required": "Swift, JavaScript, C",
+		"location": "Blairgowrie",
+		"date_posted": "Aug 28,2020",
 		"id": 16,
-		"experience": 5
+		"experience": 12
 	},
 	{
-		"comapny": "BHARTISHIP",
-		"salary": 47175585,
-		"skills_required": "JavaScript",
-		"location": "Teruel",
-		"date_posted": "Nov 18,2021",
+		"comapny": "BGRENERGY",
+		"Salary": 68830154,
+		"skills_required": "PHP, GO",
+		"location": "Frignano",
+		"date_posted": "Dec 30,2021",
 		"id": 17,
-		"experience": 11
-	},
-	{
-		"comapny": "BHAGYNAGAR",
-		"salary": 60711204,
-		"skills_required": "Css",
-		"location": "Shikarpur",
-		"date_posted": "Oct 14,2020",
-		"id": 18,
-		"experience": 2
-	},
-	{
-		"comapny": "Google",
-		"salary": 16908033,
-		"skills_required": "GO",
-		"location": "Idaho Falls",
-		"date_posted": "Apr 29, 2022",
-		"id": 19,
-		"experience": 12
-	},
-	{
-		"comapny": "CAN",
-		"salary": 62995167,
-		"skills_required": "Swift",
-		"location": "Raj Nandgaon",
-		"date_posted": "Dec 17,2020",
-		"id": 20,
-		"experience": 4
-	},
-	{
-		"comapny": "CANDC",
-		"salary": 79634354,
-		"skills_required": "JavaScript",
-		"location": "Stevoort",
-		"date_posted": "Dec 3,2020",
-		"id": 21,
-		"experience": 12
-	},
-	{
-		"comapny": "Sibelius",
-		"salary": 24372996,
-		"skills_required": "SQL",
-		"location": "Lunel",
-		"date_posted": "Jul 26,2020",
-		"id": 22,
-		"experience": 2
-	},
-	{
-		"comapny": "GESHIP",
-		"salary": 93542227,
-		"skills_required": "GO",
-		"location": "Fauglia",
-		"date_posted": "Feb 23,2021",
-		"id": 23,
-		"experience": 2
-	},
-	{
-		"comapny": "BHARATFORG",
-		"salary": 17884466,
-		"skills_required": "Objective-C",
-		"location": "San Pablo",
-		"date_posted": "Jun 9, 2022",
-		"id": 24,
-		"experience": 10
-	},
-	{
-		"comapny": "K",
-		"salary": 89822107,
-		"skills_required": "JavaScript",
-		"location": "Uluberia",
-		"date_posted": "Aug 20,2020",
-		"id": 25,
-		"experience": 10
-	},
-	{
-		"comapny": "Lycos",
-		"salary": 58811763,
-		"skills_required": "Css",
-		"location": "Saint-LŽger",
-		"date_posted": "Oct 25,2021",
-		"id": 26,
-		"experience": 13
-	},
-	{
-		"comapny": "BFUTILITIE",
-		"salary": 55759313,
-		"skills_required": "VEU",
-		"location": "Lukhovitsy",
-		"date_posted": "Jul 1, 2022",
-		"id": 27,
-		"experience": 2
-	},
-	{
-		"comapny": "CANDC",
-		"salary": 70307741,
-		"skills_required": "ANGULAR",
-		"location": "Gaggio Montano",
-		"date_posted": "Apr 5, 2022",
-		"id": 28,
-		"experience": 15
-	},
-	{
-		"comapny": "BHARATFORG",
-		"salary": 66317309,
-		"skills_required": "SQL",
-		"location": "Znamensk",
-		"date_posted": "May 15,2021",
-		"id": 29,
-		"experience": 10
-	},
-	{
-		"comapny": "3IINFOTECH",
-		"salary": 61032245,
-		"skills_required": "Ruby",
-		"location": "Fort Smith",
-		"date_posted": "Mar 18, 2022",
-		"id": 30,
-		"experience": 5
-	},
-	{
-		"comapny": "BHARATGEAR",
-		"salary": 91961974,
-		"skills_required": "REACT",
-		"location": "Ostellato",
-		"date_posted": "Apr 8, 2022",
-		"id": 31,
-		"experience": 10
-	},
-	{
-		"comapny": "3IINFOTECH",
-		"salary": 30336025,
-		"skills_required": "PHP",
-		"location": "San Chirico Nuovo",
-		"date_posted": "Jun 28,2021",
-		"id": 32,
-		"experience": 1
-	},
-	{
-		"comapny": "Cakewalk",
-		"salary": 19437905,
-		"skills_required": "PYTHON",
-		"location": "Bilaspur",
-		"date_posted": "Oct 19,2021",
-		"id": 33,
-		"experience": 11
-	},
-	{
-		"comapny": "3IINFOTECH",
-		"salary": 77060779,
-		"skills_required": "VEU",
-		"location": "Périgueux",
-		"date_posted": "Jan 20,2021",
-		"id": 34,
-		"experience": 9
-	},
-	{
-		"comapny": "Finale",
-		"salary": 67067019,
-		"skills_required": "C",
-		"location": "Marchihue",
-		"date_posted": "Jun 13,2021",
-		"id": 35,
-		"experience": 3
-	},
-	{
-		"comapny": "Lycos",
-		"salary": 52306279,
-		"skills_required": "GO",
-		"location": "Erode",
-		"date_posted": "May 21, 2022",
-		"id": 36,
 		"experience": 7
 	},
 	{
-		"comapny": "Apple Systems",
-		"salary": 44406951,
-		"skills_required": "Ruby",
-		"location": "Valfabbrica",
-		"date_posted": "Apr 1,2021",
-		"id": 37,
-		"experience": 8
-	},
-	{
-		"comapny": "CADILAHC",
-		"salary": 40752782,
-		"skills_required": "Ruby",
-		"location": "Sant'Egidio del Monte Albino",
-		"date_posted": "Jan 24, 2022",
-		"id": 38,
-		"experience": 6
-	},
-	{
-		"comapny": "3MINDIA",
-		"salary": 54684036,
-		"skills_required": "JavaScript",
-		"location": "Anand",
-		"date_posted": "Sep 8,2020",
-		"id": 39,
+		"comapny": "Macromedia",
+		"Salary": 62173051,
+		"skills_required": "SQL, Java",
+		"location": "Grangemouth",
+		"date_posted": "Jun 24,2022",
+		"id": 18,
 		"experience": 11
 	},
 	{
-		"comapny": "Borland",
-		"salary": 14500066,
-		"skills_required": "PHP",
-		"location": "Harrison Hot Springs",
-		"date_posted": "Aug 9,2020",
-		"id": 40,
-		"experience": 9
+		"comapny": "Adobe",
+		"Salary": 93736021,
+		"skills_required": "",
+		"location": "Solre-sur-Sambre",
+		"date_posted": "Nov 4,2021",
+		"id": 19,
+		"experience": 11
 	},
 	{
-		"comapny": "Borland",
-		"salary": 80735142,
-		"skills_required": "VEU",
-		"location": "Dresden",
-		"date_posted": "Jul 9, 2022",
-		"id": 41,
+		"comapny": "Cakewalk",
+		"Salary": 68952110,
+		"skills_required": "PYTHON, Ruby",
+		"location": "San Francisco",
+		"date_posted": "Nov 6,2020",
+		"id": 20,
+		"experience": 8
+	},
+	{
+		"comapny": "Yahoo",
+		"Salary": 61424635,
+		"skills_required": "Java, ANGULAR",
+		"location": "Lanco",
+		"date_posted": "Oct 26,2021",
+		"id": 21,
+		"experience": 8
+	},
+	{
+		"comapny": "CANTABIL",
+		"Salary": 64784367,
+		"skills_required": "Ruby",
+		"location": "Nogales",
+		"date_posted": "Dec 25,2021",
+		"id": 22,
+		"experience": 15
+	},
+	{
+		"comapny": "BHAGYNAGAR",
+		"Salary": 16258671,
+		"skills_required": "",
+		"location": "Bastogne",
+		"date_posted": "Feb 19,2022",
+		"id": 23,
+		"experience": 12
+	},
+	{
+		"comapny": "BHARATGEAR",
+		"Salary": 2834497,
+		"skills_required": "HTML",
+		"location": "Flin Flon",
+		"date_posted": "Aug 31,2021",
+		"id": 24,
+		"experience": 8
+	},
+	{
+		"comapny": "BHARATRA",
+		"Salary": 77310951,
+		"skills_required": "SQL, Ruby, C",
+		"location": "Olathe",
+		"date_posted": "Jun 1,2022",
+		"id": 25,
+		"experience": 2
+	},
+	{
+		"comapny": "20MICRONS",
+		"Salary": 50737760,
+		"skills_required": "Java, VEU",
+		"location": "Worms",
+		"date_posted": "Aug 6,2021",
+		"id": 26,
 		"experience": 10
 	},
 	{
-		"comapny": "CADILAHC",
-		"salary": 40609940,
+		"comapny": "Microsoft",
+		"Salary": 2695325,
+		"skills_required": "",
+		"location": "Ladispoli",
+		"date_posted": "Oct 16,2020",
+		"id": 27,
+		"experience": 8
+	},
+	{
+		"comapny": "CARBORUNIV",
+		"Salary": 59215925,
+		"skills_required": "VEU",
+		"location": "Heerlen",
+		"date_posted": "Mar 13,2021",
+		"id": 28,
+		"experience": 10
+	},
+	{
+		"comapny": "CANFINHOME",
+		"Salary": 45955995,
 		"skills_required": "Swift",
-		"location": "Sete Lagoas",
-		"date_posted": "Aug 31,2021",
+		"location": "Sechura",
+		"date_posted": "Jan 28,2021",
+		"id": 29,
+		"experience": 6
+	},
+	{
+		"comapny": "BFINVEST",
+		"Salary": 15096966,
+		"skills_required": "REACT",
+		"location": "Chandler",
+		"date_posted": "May 3,2021",
+		"id": 30,
+		"experience": 6
+	},
+	{
+		"comapny": "BHAGYNAGAR",
+		"Salary": 94501809,
+		"skills_required": "PYTHON",
+		"location": "Nil-Saint-Vincent-Saint-Martin",
+		"date_posted": "Sep 12,2021",
+		"id": 31,
+		"experience": 7
+	},
+	{
+		"comapny": "Google",
+		"Salary": 89464452,
+		"skills_required": "Objective-C, C, PYTHON",
+		"location": "Elingen",
+		"date_posted": "Aug 30,2020",
+		"id": 32,
+		"experience": 14
+	},
+	{
+		"comapny": "BHEL",
+		"Salary": 31563319,
+		"skills_required": "ANGULAR, PHP",
+		"location": "Butzbach",
+		"date_posted": "Sep 13,2021",
+		"id": 33,
+		"experience": 14
+	},
+	{
+		"comapny": "CAMLIN",
+		"Salary": 73002944,
+		"skills_required": "Ruby, SQL, HTML",
+		"location": "San Cristóbal de la Laguna",
+		"date_posted": "Jan 13,2022",
+		"id": 34,
+		"experience": 11
+	},
+	{
+		"comapny": "Google",
+		"Salary": 85536454,
+		"skills_required": "Java, PHP, PYTHON",
+		"location": "Gboko",
+		"date_posted": "Jan 28,2021",
+		"id": 35,
+		"experience": 1
+	},
+	{
+		"comapny": "BHAGYNAGAR",
+		"Salary": 65786760,
+		"skills_required": "Objective-C, Css, Java",
+		"location": "Gujranwala",
+		"date_posted": "Jan 14,2021",
+		"id": 36,
+		"experience": 2
+	},
+	{
+		"comapny": "BHAGYNAGAR",
+		"Salary": 63148674,
+		"skills_required": "Ruby",
+		"location": "Dunoon",
+		"date_posted": "Dec 3,2020",
+		"id": 37,
+		"experience": 9
+	},
+	{
+		"comapny": "Sibelius",
+		"Salary": 52643014,
+		"skills_required": "C, Ruby, GO",
+		"location": "Oyo",
+		"date_posted": "Nov 1,2021",
+		"id": 38,
+		"experience": 1
+	},
+	{
+		"comapny": "BHARATFORG",
+		"Salary": 16399479,
+		"skills_required": "",
+		"location": "Sagrada Familia",
+		"date_posted": "Dec 6,2021",
+		"id": 39,
+		"experience": 13
+	},
+	{
+		"comapny": "Lycos",
+		"Salary": 76657840,
+		"skills_required": "",
+		"location": "Negrete",
+		"date_posted": "Aug 16,2021",
+		"id": 40,
+		"experience": 1
+	},
+	{
+		"comapny": "CANDC",
+		"Salary": 21787230,
+		"skills_required": "REACT, Ruby",
+		"location": "Chiniot",
+		"date_posted": "Jan 3,2022",
+		"id": 41,
+		"experience": 2
+	},
+	{
+		"comapny": "CADILAHC",
+		"Salary": 82554945,
+		"skills_required": "REACT, JavaScript",
+		"location": "Ñuñoa",
+		"date_posted": "Dec 5,2021",
 		"id": 42,
 		"experience": 3
 	},
 	{
 		"comapny": "Sibelius",
-		"salary": 43714781,
-		"skills_required": "C++",
-		"location": "Vlimmeren",
-		"date_posted": "Jul 24,2020",
+		"Salary": 18741716,
+		"skills_required": "ANGULAR, VEU",
+		"location": "Vico nel Lazio",
+		"date_posted": "Jan 21,2021",
 		"id": 43,
 		"experience": 12
 	},
 	{
 		"comapny": "3MINDIA",
-		"salary": 99609487,
-		"skills_required": "ANGULAR",
-		"location": "Duncan",
-		"date_posted": "Jun 30,2021",
+		"Salary": 78349470,
+		"skills_required": "ANGULAR, C++, REACT",
+		"location": "Sterling Heights",
+		"date_posted": "Jun 27,2022",
 		"id": 44,
-		"experience": 9
-	},
-	{
-		"comapny": "BHARATFORG",
-		"salary": 28657234,
-		"skills_required": "ANGULAR",
-		"location": "Calvello",
-		"date_posted": "Apr 23,2021",
-		"id": 45,
-		"experience": 12
-	},
-	{
-		"comapny": "Yahoo",
-		"salary": 21288772,
-		"skills_required": "HTML",
-		"location": "Montignies-Saint-Christophe",
-		"date_posted": "Oct 21,2020",
-		"id": 46,
-		"experience": 14
-	},
-	{
-		"comapny": "BHARATRA",
-		"salary": 53756241,
-		"skills_required": "C++",
-		"location": "Emmen",
-		"date_posted": "Sep 13,2021",
-		"id": 47,
-		"experience": 11
-	},
-	{
-		"comapny": "ABGSHIP",
-		"salary": 14232875,
-		"skills_required": "JavaScript",
-		"location": "Duns",
-		"date_posted": "Oct 12,2020",
-		"id": 48,
-		"experience": 2
-	},
-	{
-		"comapny": "Lavasoft",
-		"salary": 99342444,
-		"skills_required": "Objective-C",
-		"location": "Orlando",
-		"date_posted": "Aug 9,2020",
-		"id": 49,
 		"experience": 3
 	},
 	{
 		"comapny": "BHAGWATIHO",
-		"salary": 31821773,
-		"skills_required": "PHP",
-		"location": "Beauport",
-		"date_posted": "Jun 14,2021",
-		"id": 50,
-		"experience": 11
-	},
-	{
-		"comapny": "ABCIL",
-		"salary": 23272179,
-		"skills_required": "Objective-C",
-		"location": "Tulita",
-		"date_posted": "Jun 6,2021",
-		"id": 51,
+		"Salary": 97028071,
+		"skills_required": "",
+		"location": "Orangeville",
+		"date_posted": "Apr 11,2021",
+		"id": 45,
 		"experience": 1
 	},
 	{
-		"comapny": "Adobe",
-		"salary": 68091684,
-		"skills_required": "JavaScript",
-		"location": "Dilsen-Stokkem",
-		"date_posted": "Feb 21,2021",
+		"comapny": "Lycos",
+		"Salary": 14904070,
+		"skills_required": "",
+		"location": "Sorbo Serpico",
+		"date_posted": "Jan 24,2021",
+		"id": 46,
+		"experience": 1
+	},
+	{
+		"comapny": "3MINDIA",
+		"Salary": 36080594,
+		"skills_required": "",
+		"location": "Tonalá",
+		"date_posted": "Dec 6,2021",
+		"id": 47,
+		"experience": 7
+	},
+	{
+		"comapny": "Chami",
+		"Salary": 57500280,
+		"skills_required": "",
+		"location": "Borsbeek",
+		"date_posted": "Sep 16,2021",
+		"id": 48,
+		"experience": 6
+	},
+	{
+		"comapny": "BHEL",
+		"Salary": 19075977,
+		"skills_required": "",
+		"location": "Opwijk",
+		"date_posted": "Jun 28,2022",
+		"id": 49,
+		"experience": 12
+	},
+	{
+		"comapny": "ABCIL",
+		"Salary": 1630417,
+		"skills_required": "",
+		"location": "South Dum Dum",
+		"date_posted": "Aug 31,2020",
+		"id": 50,
+		"experience": 3
+	},
+	{
+		"comapny": "BHARTISHIP",
+		"Salary": 8325854,
+		"skills_required": "SQL, Java, Ruby",
+		"location": "Burns Lake",
+		"date_posted": "Nov 13,2021",
+		"id": 51,
+		"experience": 11
+	},
+	{
+		"comapny": "3MINDIA",
+		"Salary": 83770225,
+		"skills_required": "PHP, Css",
+		"location": "Nil-Saint-Vincent-Saint-Martin",
+		"date_posted": "Nov 4,2020",
 		"id": 52,
 		"experience": 7
 	},
 	{
-		"comapny": "GESHIP",
-		"salary": 46068012,
-		"skills_required": "Swift",
-		"location": "Barahanagar",
-		"date_posted": "Jul 4,2021",
+		"comapny": "BFINVEST",
+		"Salary": 35221380,
+		"skills_required": "HTML",
+		"location": "Mildura",
+		"date_posted": "Apr 15,2022",
 		"id": 53,
+		"experience": 13
+	},
+	{
+		"comapny": "CAMBRIDGE",
+		"Salary": 11001011,
+		"skills_required": "PYTHON, VEU, Ruby",
+		"location": "Kakisa",
+		"date_posted": "Jan 8,2022",
+		"id": 54,
 		"experience": 5
 	},
 	{
-		"comapny": "BFINVEST",
-		"salary": 56742559,
-		"skills_required": "VEU",
-		"location": "Enterprise",
-		"date_posted": "Feb 11,2021",
-		"id": 54,
-		"experience": 8
-	},
-	{
-		"comapny": "Finale",
-		"salary": 96450721,
-		"skills_required": "JavaScript",
-		"location": "Rancagua",
-		"date_posted": "Sep 4,2021",
+		"comapny": " CAIRN",
+		"Salary": 29194750,
+		"skills_required": "PYTHON, C++, ANGULAR",
+		"location": "Llanquihue",
+		"date_posted": "May 13,2022",
 		"id": 55,
 		"experience": 13
 	},
 	{
-		"comapny": "Altavista",
-		"salary": 97467802,
-		"skills_required": "Swift",
-		"location": "Livingston",
-		"date_posted": "Apr 12,2021",
+		"comapny": "BHARTISHIP",
+		"Salary": 14163478,
+		"skills_required": "ANGULAR",
+		"location": "FerriŽres",
+		"date_posted": "Sep 9,2021",
 		"id": 56,
-		"experience": 5
-	},
-	{
-		"comapny": "Lycos",
-		"salary": 39399742,
-		"skills_required": "ANGULAR",
-		"location": "Warburg",
-		"date_posted": "Sep 23,2020",
-		"id": 57,
-		"experience": 12
-	},
-	{
-		"comapny": "Adobe",
-		"salary": 39615294,
-		"skills_required": "PHP",
-		"location": "Cajazeiras",
-		"date_posted": "Jan 17, 2022",
-		"id": 58,
-		"experience": 12
-	},
-	{
-		"comapny": "3IINFOTECH",
-		"salary": 86335960,
-		"skills_required": "JavaScript",
-		"location": "Bonvicino",
-		"date_posted": "Jun 22,2021",
-		"id": 59,
-		"experience": 10
-	},
-	{
-		"comapny": "Finale",
-		"salary": 66922388,
-		"skills_required": "Java",
-		"location": "Gavirate",
-		"date_posted": "Nov 24,2021",
-		"id": 60,
-		"experience": 15
-	},
-	{
-		"comapny": " CALSOFT",
-		"salary": 16515781,
-		"skills_required": "PYTHON",
-		"location": "Pelluhue",
-		"date_posted": "Jun 17, 2022",
-		"id": 61,
-		"experience": 10
-	},
-	{
-		"comapny": "BFINVEST",
-		"salary": 42196285,
-		"skills_required": "Ruby",
-		"location": "Eernegem",
-		"date_posted": "Dec 9,2021",
-		"id": 62,
-		"experience": 7
-	},
-	{
-		"comapny": "BHAGYNAGAR",
-		"salary": 17368519,
-		"skills_required": "ANGULAR",
-		"location": "Bad Vöslau",
-		"date_posted": "Oct 9,2020",
-		"id": 63,
-		"experience": 12
-	},
-	{
-		"comapny": "3MINDIA",
-		"salary": 82467338,
-		"skills_required": "Objective-C",
-		"location": "Maple Ridge",
-		"date_posted": "Mar 13, 2022",
-		"id": 64,
-		"experience": 3
-	},
-	{
-		"comapny": "3MINDIA",
-		"salary": 10632786,
-		"skills_required": "PHP",
-		"location": "Halanzy",
-		"date_posted": "Feb 2, 2022",
-		"id": 65,
-		"experience": 4
-	},
-	{
-		"comapny": "GESHIP",
-		"salary": 81402524,
-		"skills_required": "Java",
-		"location": "Donosti",
-		"date_posted": "May 13, 2022",
-		"id": 66,
-		"experience": 9
-	},
-	{
-		"comapny": "Chami",
-		"salary": 13848907,
-		"skills_required": "Ruby",
-		"location": "Sooke",
-		"date_posted": "Jul 23,2021",
-		"id": 67,
-		"experience": 1
-	},
-	{
-		"comapny": "BGRENERGY",
-		"salary": 59657510,
-		"skills_required": "SQL",
-		"location": "Priolo Gargallo",
-		"date_posted": "Nov 12,2021",
-		"id": 68,
-		"experience": 15
-	},
-	{
-		"comapny": "BHARTIARTL",
-		"salary": 93030892,
-		"skills_required": "PHP",
-		"location": "Borgo Valsugana",
-		"date_posted": "Nov 5,2020",
-		"id": 69,
-		"experience": 5
-	},
-	{
-		"comapny": " CALSOFT",
-		"salary": 78525083,
-		"skills_required": "VEU",
-		"location": "Surrey",
-		"date_posted": "Nov 5,2020",
-		"id": 70,
-		"experience": 15
-	},
-	{
-		"comapny": "Apple Systems",
-		"salary": 2861188,
-		"skills_required": "PHP",
-		"location": "Kortrijk",
-		"date_posted": "Jun 25, 2022",
-		"id": 71,
-		"experience": 10
-	},
-	{
-		"comapny": "20MICRONS",
-		"salary": 29870508,
-		"skills_required": "REACT",
-		"location": "Liernu",
-		"date_posted": "Dec 25,2021",
-		"id": 72,
-		"experience": 11
-	},
-	{
-		"comapny": " CAIRN",
-		"salary": 60663250,
-		"skills_required": "PYTHON",
-		"location": "Shimoga",
-		"date_posted": "Sep 18,2021",
-		"id": 73,
-		"experience": 6
-	},
-	{
-		"comapny": "BHEL",
-		"salary": 23982891,
-		"skills_required": "Swift",
-		"location": "Edam",
-		"date_posted": "Sep 15,2021",
-		"id": 74,
-		"experience": 15
-	},
-	{
-		"comapny": "CANFINHOME",
-		"salary": 34919146,
-		"skills_required": "PHP",
-		"location": "Vöcklabruck",
-		"date_posted": "Jun 4, 2022",
-		"id": 75,
-		"experience": 8
-	},
-	{
-		"comapny": "Chami",
-		"salary": 79083739,
-		"skills_required": "Objective-C",
-		"location": "Lodelinsart",
-		"date_posted": "Jan 5,2021",
-		"id": 76,
-		"experience": 5
-	},
-	{
-		"comapny": "CADILAHC",
-		"salary": 24735573,
-		"skills_required": "HTML",
-		"location": "Colina",
-		"date_posted": "Jan 1,2021",
-		"id": 77,
-		"experience": 4
-	},
-	{
-		"comapny": "BHARTIARTL",
-		"salary": 46492495,
-		"skills_required": "PHP",
-		"location": "Oosterhout",
-		"date_posted": "Sep 13,2021",
-		"id": 78,
 		"experience": 14
 	},
 	{
-		"comapny": "BHEL",
-		"salary": 55984887,
-		"skills_required": "PHP",
-		"location": "Futaleufú",
-		"date_posted": "Aug 7,2021",
-		"id": 79,
-		"experience": 11
+		"comapny": "CAN",
+		"Salary": 48867388,
+		"skills_required": "REACT, Java, PHP",
+		"location": "Douai",
+		"date_posted": "Oct 22,2020",
+		"id": 57,
+		"experience": 4
+	},
+	{
+		"comapny": "Adobe",
+		"Salary": 89056903,
+		"skills_required": "",
+		"location": "Mannekensvere",
+		"date_posted": "Dec 3,2020",
+		"id": 58,
+		"experience": 15
+	},
+	{
+		"comapny": "CAMBRIDGE",
+		"Salary": 52428832,
+		"skills_required": "Css, GO",
+		"location": "Hantes-WihŽries",
+		"date_posted": "Apr 1,2022",
+		"id": 59,
+		"experience": 4
+	},
+	{
+		"comapny": "CAMBRIDGE",
+		"Salary": 54100620,
+		"skills_required": "HTML, Swift, Ruby",
+		"location": "Körfez",
+		"date_posted": "Mar 2,2021",
+		"id": 60,
+		"experience": 8
+	},
+	{
+		"comapny": "CANTABIL",
+		"Salary": 84795208,
+		"skills_required": "VEU, Css, Swift",
+		"location": "San Marcos",
+		"date_posted": "Sep 20,2021",
+		"id": 61,
+		"experience": 1
+	},
+	{
+		"comapny": " CALSOFT",
+		"Salary": 62323014,
+		"skills_required": "PHP, Swift, SQL",
+		"location": "Burnpur",
+		"date_posted": "Oct 21,2021",
+		"id": 62,
+		"experience": 5
+	},
+	{
+		"comapny": "20MICRONS",
+		"Salary": 6826709,
+		"skills_required": "GO",
+		"location": "Bloomington",
+		"date_posted": "Sep 30,2020",
+		"id": 63,
+		"experience": 14
+	},
+	{
+		"comapny": "Macromedia",
+		"Salary": 9161052,
+		"skills_required": "C++, PHP",
+		"location": "Gubkin",
+		"date_posted": "Feb 5,2022",
+		"id": 64,
+		"experience": 4
+	},
+	{
+		"comapny": "Finale",
+		"Salary": 8785354,
+		"skills_required": "Objective-C, ANGULAR",
+		"location": "Presteigne",
+		"date_posted": "Jun 20,2022",
+		"id": 65,
+		"experience": 15
+	},
+	{
+		"comapny": "CAN",
+		"Salary": 30684432,
+		"skills_required": "HTML, VEU, Objective-C",
+		"location": "North Battleford",
+		"date_posted": "Oct 13,2021",
+		"id": 66,
+		"experience": 2
+	},
+	{
+		"comapny": "BHARTISHIP",
+		"Salary": 3031225,
+		"skills_required": "PYTHON, C++, Css",
+		"location": "Camrose",
+		"date_posted": "May 25,2022",
+		"id": 67,
+		"experience": 4
+	},
+	{
+		"comapny": "Finale",
+		"Salary": 22327526,
+		"skills_required": "REACT",
+		"location": "Samaniego",
+		"date_posted": "Mar 5,2022",
+		"id": 68,
+		"experience": 6
+	},
+	{
+		"comapny": "BGRENERGY",
+		"Salary": 73805600,
+		"skills_required": "GO, Swift",
+		"location": "Kalat",
+		"date_posted": "Jun 7,2022",
+		"id": 69,
+		"experience": 6
 	},
 	{
 		"comapny": "BFUTILITIE",
-		"salary": 48049494,
-		"skills_required": "Swift",
-		"location": "Serramonacesca",
-		"date_posted": "Nov 14,2020",
-		"id": 80,
-		"experience": 3
+		"Salary": 12665883,
+		"skills_required": "SQL",
+		"location": "Sibret",
+		"date_posted": "Sep 30,2021",
+		"id": 70,
+		"experience": 6
 	},
 	{
-		"comapny": "BHARATGEAR",
-		"salary": 36996000,
-		"skills_required": "REACT",
-		"location": "Devonport",
-		"date_posted": "Feb 15,2021",
-		"id": 81,
-		"experience": 9
-	},
-	{
-		"comapny": "BHAGYNAGAR",
-		"salary": 3926173,
-		"skills_required": "Swift",
-		"location": "Gespeg",
-		"date_posted": "Feb 2, 2022",
-		"id": 82,
+		"comapny": "GESHIP",
+		"Salary": 36524512,
+		"skills_required": "Ruby, Objective-C",
+		"location": "Wigtown",
+		"date_posted": "Dec 13,2021",
+		"id": 71,
 		"experience": 5
 	},
 	{
 		"comapny": "ABGSHIP",
-		"salary": 89919778,
-		"skills_required": "PHP",
-		"location": "Trivigno",
-		"date_posted": "Apr 27,2021",
-		"id": 83,
+		"Salary": 92444911,
+		"skills_required": "C++, ANGULAR",
+		"location": "Sangli",
+		"date_posted": "Sep 28,2020",
+		"id": 72,
+		"experience": 13
+	},
+	{
+		"comapny": "Google",
+		"Salary": 25539577,
+		"skills_required": "",
+		"location": "La Seyne-sur-Mer",
+		"date_posted": "Jun 29,2021",
+		"id": 73,
+		"experience": 6
+	},
+	{
+		"comapny": " CAIRN",
+		"Salary": 55935073,
+		"skills_required": "REACT, PHP",
+		"location": "Orbais",
+		"date_posted": "Mar 30,2021",
+		"id": 74,
+		"experience": 5
+	},
+	{
+		"comapny": "3MINDIA",
+		"Salary": 84441106,
+		"skills_required": "PHP, Ruby",
+		"location": "San Fratello",
+		"date_posted": "Jan 19,2021",
+		"id": 75,
+		"experience": 5
+	},
+	{
+		"comapny": "Lycos",
+		"Salary": 30039538,
+		"skills_required": "",
+		"location": "Pyeongtaek",
+		"date_posted": "Mar 15,2021",
+		"id": 76,
+		"experience": 8
+	},
+	{
+		"comapny": "GESHIP",
+		"Salary": 73413221,
+		"skills_required": "",
+		"location": "Picton",
+		"date_posted": "Dec 25,2020",
+		"id": 77,
 		"experience": 7
 	},
 	{
-		"comapny": "BHARTIARTL",
-		"salary": 52494258,
-		"skills_required": "C",
-		"location": "Hualaihué",
-		"date_posted": "May 22, 2022",
+		"comapny": "CAMBRIDGE",
+		"Salary": 91739310,
+		"skills_required": "SQL",
+		"location": "Jonesboro",
+		"date_posted": "Dec 18,2021",
+		"id": 78,
+		"experience": 2
+	},
+	{
+		"comapny": " CAIRN",
+		"Salary": 42399714,
+		"skills_required": "REACT",
+		"location": "Sullana",
+		"date_posted": "Oct 14,2021",
+		"id": 79,
+		"experience": 4
+	},
+	{
+		"comapny": "CANFINHOME",
+		"Salary": 71083001,
+		"skills_required": "",
+		"location": "Moorsele",
+		"date_posted": "Feb 24,2021",
+		"id": 80,
+		"experience": 3
+	},
+	{
+		"comapny": "Sibelius",
+		"Salary": 56235365,
+		"skills_required": "REACT",
+		"location": "Nanterre",
+		"date_posted": "Jun 25,2022",
+		"id": 81,
+		"experience": 13
+	},
+	{
+		"comapny": "CANTABIL",
+		"Salary": 37826701,
+		"skills_required": "VEU",
+		"location": "Lutterworth",
+		"date_posted": "Aug 5,2020",
+		"id": 82,
+		"experience": 2
+	},
+	{
+		"comapny": "Macromedia",
+		"Salary": 2024061,
+		"skills_required": "",
+		"location": "Chile Chico",
+		"date_posted": "Dec 23,2020",
+		"id": 83,
+		"experience": 12
+	},
+	{
+		"comapny": " CALSOFT",
+		"Salary": 37044671,
+		"skills_required": "SQL",
+		"location": "Avin",
+		"date_posted": "Jun 18,2021",
 		"id": 84,
+		"experience": 6
+	},
+	{
+		"comapny": "Finale",
+		"Salary": 72398807,
+		"skills_required": "",
+		"location": "Telfs",
+		"date_posted": "Jan 18,2022",
+		"id": 85,
+		"experience": 5
+	},
+	{
+		"comapny": "CAMBRIDGE",
+		"Salary": 96262021,
+		"skills_required": "JavaScript, Ruby",
+		"location": "Neeroeteren",
+		"date_posted": "Feb 16,2022",
+		"id": 86,
+		"experience": 11
+	},
+	{
+		"comapny": "20MICRONS",
+		"Salary": 60769714,
+		"skills_required": "Css",
+		"location": "La Paz",
+		"date_posted": "Mar 20,2022",
+		"id": 87,
+		"experience": 6
+	},
+	{
+		"comapny": "Lycos",
+		"Salary": 35151685,
+		"skills_required": "PYTHON",
+		"location": "Strombeek-Bever",
+		"date_posted": "Aug 3,2020",
+		"id": 88,
 		"experience": 5
 	},
 	{
 		"comapny": "ABB",
-		"salary": 1904035,
-		"skills_required": "JavaScript",
-		"location": "Trochu",
-		"date_posted": "Nov 23,2021",
-		"id": 85,
-		"experience": 7
+		"Salary": 93031166,
+		"skills_required": "C++, Swift, PHP",
+		"location": "Lagundo/Algund",
+		"date_posted": "Feb 23,2022",
+		"id": 89,
+		"experience": 10
 	},
 	{
-		"comapny": "BHARATRA",
-		"salary": 55427005,
-		"skills_required": "C++",
-		"location": "Mont-Saint-Guibert",
-		"date_posted": "Oct 16,2020",
-		"id": 86,
-		"experience": 1
-	},
-	{
-		"comapny": "BHARATGEAR",
-		"salary": 43575179,
-		"skills_required": "Ruby",
-		"location": "Gilly",
-		"date_posted": "Aug 28,2021",
-		"id": 87,
-		"experience": 7
-	},
-	{
-		"comapny": "BFINVEST",
-		"salary": 8687112,
-		"skills_required": "C",
-		"location": "Pievepelago",
-		"date_posted": "Mar 15, 2022",
-		"id": 88,
+		"comapny": " CALSOFT",
+		"Salary": 54207093,
+		"skills_required": "JavaScript, Css, ANGULAR",
+		"location": "Imst",
+		"date_posted": "Jan 13,2022",
+		"id": 90,
 		"experience": 4
 	},
 	{
-		"comapny": "BFINVEST",
-		"salary": 20387612,
-		"skills_required": "ANGULAR",
-		"location": "Oban",
-		"date_posted": "Jun 6, 2022",
-		"id": 89,
-		"experience": 7
-	},
-	{
-		"comapny": "BGRENERGY",
-		"salary": 90077555,
-		"skills_required": "ANGULAR",
-		"location": "Portland",
-		"date_posted": "Jul 29,2021",
-		"id": 90,
+		"comapny": "GESHIP",
+		"Salary": 18251068,
+		"skills_required": "Java",
+		"location": "Lake Cowichan",
+		"date_posted": "Sep 5,2021",
+		"id": 91,
 		"experience": 6
 	},
 	{
-		"comapny": "BHARTISHIP",
-		"salary": 91380991,
-		"skills_required": "HTML",
-		"location": "Alto Baudó",
-		"date_posted": "Jul 10, 2022",
-		"id": 91,
-		"experience": 1
-	},
-	{
-		"comapny": "Sibelius",
-		"salary": 35568321,
+		"comapny": "BGRENERGY",
+		"Salary": 99751482,
 		"skills_required": "Swift",
-		"location": "Veere",
-		"date_posted": "Jan 24,2021",
+		"location": "Strijtem",
+		"date_posted": "Mar 9,2021",
 		"id": 92,
-		"experience": 10
-	},
-	{
-		"comapny": "Sibelius",
-		"salary": 57687047,
-		"skills_required": "GO",
-		"location": "Puente Alto",
-		"date_posted": "Jun 16, 2022",
-		"id": 93,
-		"experience": 10
-	},
-	{
-		"comapny": "Finale",
-		"salary": 60572400,
-		"skills_required": "Css",
-		"location": "Terlago",
-		"date_posted": "Jan 14, 2022",
-		"id": 94,
 		"experience": 12
 	},
 	{
-		"comapny": "ABCIL",
-		"salary": 66798384,
-		"skills_required": "C",
-		"location": "Quibdó",
-		"date_posted": "Sep 8,2020",
-		"id": 95,
-		"experience": 14
+		"comapny": "BFUTILITIE",
+		"Salary": 20675667,
+		"skills_required": "HTML, ANGULAR",
+		"location": "Nîmes",
+		"date_posted": "Apr 25,2022",
+		"id": 93,
+		"experience": 11
 	},
 	{
-		"comapny": "CARBORUNIV",
-		"salary": 68676811,
-		"skills_required": "JavaScript",
-		"location": "Sinaai-Waas",
-		"date_posted": "Sep 10,2021",
-		"id": 96,
+		"comapny": "BHARATGEAR",
+		"Salary": 14831287,
+		"skills_required": "Java",
+		"location": "Ilbono",
+		"date_posted": "Mar 16,2022",
+		"id": 94,
+		"experience": 8
+	},
+	{
+		"comapny": "CANDC",
+		"Salary": 6141600,
+		"skills_required": "SQL, C++",
+		"location": "Casperia",
+		"date_posted": "Mar 31,2021",
+		"id": 95,
 		"experience": 4
 	},
 	{
-		"comapny": "BHARTIARTL",
-		"salary": 14460514,
-		"skills_required": "PYTHON",
-		"location": "Pointe-du-Lac",
-		"date_posted": "Oct 8,2021",
+		"comapny": "ABB",
+		"Salary": 21583376,
+		"skills_required": "REACT, ANGULAR",
+		"location": "Evesham",
+		"date_posted": "Oct 3,2020",
+		"id": 96,
+		"experience": 5
+	},
+	{
+		"comapny": "CADILAHC",
+		"Salary": 9506934,
+		"skills_required": "PHP",
+		"location": "Evesham",
+		"date_posted": "Apr 27,2021",
 		"id": 97,
-		"experience": 9
+		"experience": 1
 	},
 	{
-		"comapny": "Chami",
-		"salary": 54984784,
-		"skills_required": "ANGULAR",
-		"location": "Drayton Valley",
-		"date_posted": "Aug 12,2021",
+		"comapny": "CANDC",
+		"Salary": 41271299,
+		"skills_required": "PHP, VEU, Swift",
+		"location": "North Las Vegas",
+		"date_posted": "Jul 27,2021",
 		"id": 98,
-		"experience": 3
-	},
-	{
-		"comapny": "CAMLIN",
-		"salary": 45860166,
-		"skills_required": "Objective-C",
-		"location": "Veere",
-		"date_posted": "Nov 1,2021",
-		"id": 99,
 		"experience": 7
 	},
 	{
-		"comapny": "Sibelius",
-		"salary": 58906133,
-		"skills_required": "Objective-C",
-		"location": "Algeciras",
-		"date_posted": "Feb 24,2021",
-		"id": 100,
+		"comapny": "BHARATGEAR",
+		"Salary": 50521537,
+		"skills_required": "PYTHON, REACT, Swift",
+		"location": "Monte Patria",
+		"date_posted": "Jul 18,2022",
+		"id": 99,
 		"experience": 8
+	},
+	{
+		"comapny": "CAN",
+		"Salary": 7561515,
+		"skills_required": "",
+		"location": "Mumbai",
+		"date_posted": "Aug 1,2020",
+		"id": 100,
+		"experience": 2
 	}
 ]
+
+export const language = ["Java","GO","C","C++","JavaScript","HTML","Css","REACT","Angular","VEU","PYTHON","Ruby","Objective-C","PHP","SQL","Swift"]

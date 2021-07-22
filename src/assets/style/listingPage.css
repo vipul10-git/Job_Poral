@@ -3,10 +3,19 @@
     border-radius: 1rem;
     padding: 1rem 1.5rem;
 }
-.listing-wrapper{
+.listing-wrapper,.lang-section{
     width: 770px;
     margin: auto;
+    margin-top: 1.5rem;
+}
+.lang-section{
     margin-top: 3.5rem;
+    position: sticky;
+    top: 3rem;
+    background-color: hsl(0, 0%,100%);
+    padding: 1rem;
+    box-sizing: border-box;
+    box-shadow: 0 5px 3px 0 hsl(0, 0%, 68%)	
 }
 .subText{
     color:hsl(0, 0%, 62%);
@@ -24,7 +33,7 @@
     .listing{
         padding: 1rem 0.5rem 0.5rem 0.5rem;
     }
-    .listing-wrapper{
+    .listing-wrapper,.lang-section{
         width: 100%;
     }
     .ellpise{
