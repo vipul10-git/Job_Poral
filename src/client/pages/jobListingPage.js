@@ -43,6 +43,7 @@ export default function ListingPage() {
         let userStoredData = localStorage.getItem(userEmail);
         userStoredData = JSON.parse(userStoredData)
         setUserData(userStoredData)
+        setApplyList(userStoredData.appliedList && [])
     }, [])
 
     function apply(id) {

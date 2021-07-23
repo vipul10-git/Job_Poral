@@ -21,7 +21,15 @@ export default function LoginPage() {
     let history = useHistory();
     const inputFile = useRef(null)
     useEffect(() => {
-        sessionStorage.clear();
+        if(sessionStorage.getItem('email')){
+            let userdataifavailable = localStorage.getItem(sessionStorage.getItem('email'))
+            userdataifavailable = JSON.parse(userdataifavailable);
+            if(userdataifavailable.userExtraData){
+                history.replace('/job-listing')
+            }else{
+                setUi(2);
+            }
+        }
     }, [])
     function validateForm() {
         let emailRex = /\S+@\S+\.\S+/;
@@ -37,12 +45,17 @@ export default function LoginPage() {
             let userData = JSON.parse(localStorage.getItem(email));
             if (userData.password === password) {
                 sessionStorage.setItem('email', email)
-                history.replace("/job-listing");
+                if(!userData.userExtraData){
+                    setUi(2);
+                }else{
+                    history.replace("/job-listing");
+                }
             } else {
                 setError('password')
             }
             return;
         }
+        sessionStorage.setItem('email', email)
         setUi(2);
         localStorage.setItem(email, JSON.stringify({ email: email, password: password }));
     }
@@ -56,7 +69,7 @@ export default function LoginPage() {
             setError("mobile")
             return;
         }
-        let data = localStorage.getItem(email);
+        let data = localStorage.getItem(sessionStorage.getItem('email') ? sessionStorage.getItem('email') : email);
         data = JSON.parse(data);
         let additionalData = {
             userImg,
@@ -65,10 +78,12 @@ export default function LoginPage() {
             gitProjSelected,
             mobile,
             name,
+            collegeInfo,
+            appliedList:[],
+            userExtraData : true
         }
         data = { ...data, ...additionalData };
-        sessionStorage.setItem('email', email)
-        localStorage.setItem(email, JSON.stringify(data))
+        localStorage.setItem(data.email, JSON.stringify(data))
         history.replace("/job-listing");
     }
 

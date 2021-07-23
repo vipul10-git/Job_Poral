@@ -62,8 +62,8 @@ export default function UserProfile() {
                     </div>
                     <table>
                         <tbody>
-                            {collegeInfo.collegeName && <tr><th>College Name</th><td>{collegeInfo.collegeName}</td></tr>}
-                            {collegeInfo.collegeLastDate && <tr><th>College Last Date</th><td>{collegeInfo.collegeLastDate}</td></tr>}
+                            {collegeInfo?.collegeName && <tr><th>College Name</th><td>{collegeInfo.collegeName}</td></tr>}
+                            {collegeInfo?.collegeLastDate && <tr><th>College Last Date</th><td>{collegeInfo.collegeLastDate}</td></tr>}
                             {linkedIn && <tr><th>LinkedIn</th><td>{linkedIn}</td></tr>}
                             {githubAccName && <tr><th>GitHub</th><td>{githubAccName}</td></tr>}
                         </tbody>
