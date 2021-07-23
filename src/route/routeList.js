@@ -13,12 +13,12 @@ export const RouteList = [
         component: JobListing,
     },
     {
-        path: '/',
-        component: LandingPage,
-    },
-    {
         path :'/user-profile',
         component: UserProfile,
 
+    },
+    {
+        path: '/',
+        component: LandingPage,
     }
 ]
