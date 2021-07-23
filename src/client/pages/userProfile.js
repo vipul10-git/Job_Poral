@@ -39,7 +39,6 @@ export default function UserProfile() {
     }
 
     const openGithub = (url) => {
-        console.log(url)
         window.open(url);
     }
 
@@ -47,48 +46,53 @@ export default function UserProfile() {
 
     return (
         <React.Fragment>
-            
+
             <div className="listing-wrapper">
                 {userData && Object.keys(userData).length > 0 && <div className='user-Profile-section'>
                     <div>
                         {userImg && <img src={userImg} alt='user-img' />}
                         {!userImg && <div className='dummyImage noImg'>No image</div>}
-                        <div>{name}</div>
-                        <div>{name && `+91 ${mobile}`}</div>
-                        <div>{email}</div>
-                        <Button
-                            active={false}
-                            onClick={() => logout()}
-                            radius="1rem"
-                            padding="0.5rem 1rem"
-                            margin='1rem'
-                            children="Logout"
-                            bColor="var(--errorColor)"
-                            border="none"
-                            color="var(--white)"
-                        />
+                        <table>
+                            <tbody>
+                                {name && <tr><th>Name</th><td>{name}</td></tr>}
+                                {mobile && <tr><th>Mobile No.</th><td>{mobile}</td></tr>}
+                                {email && <tr><th>Email</th><td>{email}</td></tr>}
+                            </tbody>
+                        </table>
                     </div>
                     <table>
                         <tbody>
-                        {collegeInfo && <Fragment><tr><th>College Name</th><td>{collegeInfo.collegeName}</td></tr>
-                        <tr><th>College Last Date</th><td>{collegeInfo.collegeLastDate}</td></tr></Fragment>}
-                        {linkedIn && <tr><th>LinkedIn</th><td>{linkedIn}</td></tr>}
-                        {githubAccName && <tr><th>GitHub</th><td>{githubAccName}</td></tr>}
+                            {collegeInfo.collegeName && <tr><th>College Name</th><td>{collegeInfo.collegeName}</td></tr>}
+                            {collegeInfo.collegeLastDate && <tr><th>College Last Date</th><td>{collegeInfo.collegeLastDate}</td></tr>}
+                            {linkedIn && <tr><th>LinkedIn</th><td>{linkedIn}</td></tr>}
+                            {githubAccName && <tr><th>GitHub</th><td>{githubAccName}</td></tr>}
                         </tbody>
                     </table>
-                    <div>
-                        {gitProjSelected && <strong>GitHub Project</strong>}
-                        {gitProjSelected?.map(i => {
-                            return (
-                                <div key={i.name} onClick={() => openGithub(i.gitUrl)}>{i.name}</div>
-                            )
-                        })
-                        }
-                    </div>
+                    {gitProjSelected.length > 0 &&
+                        <div>
+                            <strong>GitHub Project</strong>
+                            {gitProjSelected?.map(i => {
+                                return (
+                                    <div key={i.name} onClick={() => openGithub(i.gitUrl)}>{i.name}</div>
+                                )
+                            })
+                            }
+                        </div>
+                    }
                 </div>
                 }
-
-                {jobData.length > 0 && <div style={{marginLeft:'1rem'}}><strong>Applied Jobs</strong></div>}
+                <Button
+                    active={false}
+                    onClick={() => logout()}
+                    radius="1rem"
+                    padding="0.5rem 1rem"
+                    margin='1rem'
+                    children="Logout"
+                    bColor="var(--errorColor)"
+                    border="none"
+                    color="var(--white)"
+                />
+                {jobData.length > 0 && <div style={{ marginLeft: '1rem' }}><strong>Applied Jobs</strong></div>}
                 <JobList jobData={jobData} btnReq={false} />
             </div>
 

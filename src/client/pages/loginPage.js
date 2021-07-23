@@ -29,16 +29,13 @@ export default function LoginPage() {
             setError("email")
             return;
         }
-        console.log(password)
         if (password.length <= 7) {
-            console.log(121212)
             setError("password")
             return;
         }
         if (localStorage.getItem(email)) {
             let userData = JSON.parse(localStorage.getItem(email));
             if (userData.password === password) {
-                console.log(12121212)
                 sessionStorage.setItem('email', email)
                 history.replace("/job-listing");
             } else {
@@ -49,7 +46,7 @@ export default function LoginPage() {
         setUi(2);
         localStorage.setItem(email, JSON.stringify({ email: email, password: password }));
     }
-    console.log(errorType)
+
     function submitForm() {
         if (name.length === 0) {
             setError("name")
@@ -68,9 +65,8 @@ export default function LoginPage() {
             gitProjSelected,
             mobile,
             name,
-            collegeInfo
         }
-        data = { ...data[0], ...additionalData };
+        data = { ...data, ...additionalData };
         sessionStorage.setItem('email', email)
         localStorage.setItem(email, JSON.stringify(data))
         history.replace("/job-listing");
@@ -147,7 +143,7 @@ export default function LoginPage() {
                     <div>
                         <input type="file" accept="image/*" name="image" ref={inputFile} id="file" onChange={loadFile} style={{ display: "none" }} />
                         {userImg.length > 0 && <img src={userImg} id="imgId" alt="user-img" className="user-img" onClick={() => opneImageBox()} />}
-                        {userImg.length <= 0 && <div className="dummyImage noImg" onClick={() => opneImageBox()}>Upload image</div>}
+                        {userImg.length <= 0 && <div className="dummyImage" onClick={() => opneImageBox()}>Upload image</div>}
                     </div>
                     <div className="mB1 displayFlex">
                         <label className="flex1">Name</label>
