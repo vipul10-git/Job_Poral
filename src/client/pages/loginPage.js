@@ -29,13 +29,16 @@ export default function LoginPage() {
             setError("email")
             return;
         }
+        console.log(password)
         if (password.length <= 7) {
+            console.log(121212)
             setError("password")
             return;
         }
         if (localStorage.getItem(email)) {
             let userData = JSON.parse(localStorage.getItem(email));
             if (userData.password === password) {
+                console.log(12121212)
                 sessionStorage.setItem('email', email)
                 history.replace("/job-listing");
             } else {
@@ -44,9 +47,9 @@ export default function LoginPage() {
             return;
         }
         setUi(2);
-        localStorage.setItem(email, JSON.stringify([{ email: email, password: password }]));
+        localStorage.setItem(email, JSON.stringify({ email: email, password: password }));
     }
-
+    console.log(errorType)
     function submitForm() {
         if (name.length === 0) {
             setError("name")
@@ -144,7 +147,7 @@ export default function LoginPage() {
                     <div>
                         <input type="file" accept="image/*" name="image" ref={inputFile} id="file" onChange={loadFile} style={{ display: "none" }} />
                         {userImg.length > 0 && <img src={userImg} id="imgId" alt="user-img" className="user-img" onClick={() => opneImageBox()} />}
-                        {userImg.length <= 0 && <div className="dummyImage" onClick={() => opneImageBox()}>Uplad image</div>}
+                        {userImg.length <= 0 && <div className="dummyImage noImg" onClick={() => opneImageBox()}>Upload image</div>}
                     </div>
                     <div className="mB1 displayFlex">
                         <label className="flex1">Name</label>
@@ -169,7 +172,7 @@ export default function LoginPage() {
                             onClick={() => setError("")}
                         />
                     </div>
-                    <div className="mB1"><u><b>College Info</b></u></div>
+                    <div className="mB1"><u><strong>College Info</strong></u></div>
                     <div className="mB1 displayFlex">
                         <label className="flex1">College Name</label>
                         <Input
@@ -190,7 +193,7 @@ export default function LoginPage() {
                             onChange={(e) => setCollege({ collegeName: collegeName, collegeLastDate: e.target.value })}
                         />
                     </div>
-                    <div className="mB1"><u><b>Link Account</b></u></div>
+                    <div className="mB1"><u><strong>Link Account</strong></u></div>
                     <div className="mB1 displayFlex">
                         <label className="flex1">LinkedIn</label>
                         <Input

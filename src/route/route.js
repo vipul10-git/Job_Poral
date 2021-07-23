@@ -8,7 +8,7 @@ const RoutePage = () => {
             <Switch>
             {RouteList.map((routeData,index) => {
                 return <Route path={routeData.path} key={index} render={() => {
-                    return <routeData.component />
+                        return <routeData.component />
                 }} />
             })}
             </Switch>

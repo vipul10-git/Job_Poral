@@ -1,0 +1,32 @@
+.user-Profile-section img,.noImg{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.user-Profile-section {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+th{
+    text-align: left;
+}
+
+.user-Profile-section div{
+    margin: auto;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+@media (max-width:480px){
+    .user-Profile-section {
+        flex-direction: column;
+    }
+    .user-Profile-section:nth-child(1){
+        text-align: center;
+    }
+    .user-Profile-section table{
+        margin: auto;
+    }
+}

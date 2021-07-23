@@ -1,19 +1,18 @@
 import React, { useState, useEffect } from "react";
 import Button from "../components/button";
 import "../../assets/style/listingPage.css";
-import Bag from "../../assets/img/bag.png";
-import LocationIcon from "../../assets/img/location.png";
 import { language } from "../util/constants";
 import Header from "../components/header";
 import { useHistory } from "react-router-dom";
 import LanguageSearch from '../components/languageSearch';
 import { useDispatch } from 'react-redux';
-import Container from '../../container/container';
-import { apiCall } from '../../action/action';
+import Container from '../../container/dataContainer';
+import { getListingData } from '../../action/action';
+import JobList from '../components/joblist';
 
 export default function ListingPage() {
     const [appliedList, setApplyList] = useState([]);
-    const [userData, setUserData] = useState({});
+    const [userData, setUserData] = useState({})
     const [selectedLangList, setSelectedSortList] = useState([]);
     const [jobData, setJobData] = useState([]);
     const [totalData, setTotalItem] = useState(0);
@@ -22,11 +21,12 @@ export default function ListingPage() {
     const [paginationPosi, setPosition] = useState(200)
     const { jobDataSet, totalItem } = Container();
 
-    let history = useHistory();
+    const history = useHistory();
     const dispatch = useDispatch();
 
     useEffect(() => {
-        dispatch(apiCall(1));
+        setPosition(1)
+        dispatch(getListingData(1));
     }, [dispatch])
 
     useEffect(() => {
@@ -43,9 +43,6 @@ export default function ListingPage() {
         let userStoredData = localStorage.getItem(userEmail);
         userStoredData = JSON.parse(userStoredData)
         setUserData(userStoredData)
-        if ('appliedList' in userStoredData) {
-            setApplyList(userStoredData.appliedList)
-        }
     }, [])
 
     function apply(id) {
@@ -103,7 +100,7 @@ export default function ListingPage() {
 
     const getnextSetdata = (position) =>{
         setPosition(position)
-        dispatch(apiCall(position))
+        dispatch(getListingData(position))
     }
 
     const pagination = () => {
@@ -144,53 +141,7 @@ export default function ListingPage() {
                     children='Filter'
                 />}
                 {showFilterTab && <LanguageSearch showFilterTab={() => setShowFiltertab(false)} language={language} selecteListFilter={selecteListFilter} selectedList={selectedLangList} selectedSalaryFilter={selectedSalaryFilter} selectSalaryFilter={selectSalaryFilter} />}
-
-                {jobData && jobData.length > 0 && jobData.map((i) => {
-                    let applied = false
-                    if (appliedList.length > 0 && appliedList.indexOf(i.id) >= 0) {
-                        applied = true
-                    }
-                    return (
-                        <div key={i.id} className="listing flex-row content-space-between displayFlex align-center">
-                            <div className="displayFlex flex-column flex3">
-                                <span className="mB1">{i.company} - {i.skills.join(', ')}
-                                    {window.innerWidth < 780 && <div style={{ float: "right" }}>
-                                        <Button
-                                            active={applied}
-                                            onClick={!applied ? () => apply(i.id):()=>{}}
-                                            radius="1rem"
-                                            padding="0.2rem 1rem"
-                                            children={applied ? "Applied" : 'Apply'}
-                                            width="5rem"
-                                            height="2rem" />
-                                    </div>
-                                    }
-                                </span>
-                                <div className="displayFlex content-space-between">
-                                    <div className="flex1">
-                                        <img className='bag-icon' src={Bag} alt="bag" />
-                                        <span className="subText"> &nbsp;{i.exp}-{i.exp + 3} yrs</span>
-                                    </div>
-                                    <div className="flex1">
-                                        <img className='loc-icon' src={LocationIcon} alt="location" />
-                                        <span className="subText ellpise"> {i.loc}</span>
-                                    </div>
-                                    <span className="subText flex1 textCenter">&#8377; {i.Sal}</span>
-                                </div>
-                            </div>
-                            {window.innerWidth > 780 &&
-                                <Button
-                                    active ={applied}
-                                    onClick={!applied ? () => apply(i.id):()=>{}}
-                                    radius="1rem"
-                                    padding="0.2rem 1rem"
-                                    children={applied ? "Applied" : 'Apply'}
-                                    width="5rem"
-                                    height="2rem" />
-                            }
-                        </div>
-                    )
-                })}
+                <JobList jobData={jobData} btnReq={true} apply={apply} appliedList={appliedList} />
                 {pagination()}
             </div>
         </React.Fragment>

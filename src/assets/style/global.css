@@ -6,7 +6,7 @@
 }
 
 body {
-  margin: 0;
+  margin: 0 0 1rem;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -80,6 +80,7 @@ input:focus{
   place-items: center;
   cursor: pointer;;
 }
+
 @media (max-width:480px){
   body{
     font-size: 0.8rem;
