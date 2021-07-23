@@ -1,0 +1,11 @@
+.activeBtn{
+    background-color: var(--companyColor);
+    border: none;
+    color: var(--white);
+    box-shadow: 0 0 2x 0 var(--companyColor);
+}
+.inActiveBtn{
+    background-color: var(--white);
+    border: 1px solid var(--companyColor) ;
+    color: var(--companyColor) ;
+}

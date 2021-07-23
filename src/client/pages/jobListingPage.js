@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from "react";
+import React, { useState, useEffect } from "react";
 import Button from "../components/button";
 import "../../assets/style/listingPage.css";
 import Bag from "../../assets/img/bag.png";
@@ -26,10 +26,11 @@ export default function ListingPage() {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        dispatch(apiCall(200));
+        dispatch(apiCall(1));
     }, [dispatch])
 
     useEffect(() => {
+        document.documentElement.scrollTop = 0;
         setJobData(jobDataSet);
         setTotalItem(totalItem)
       }, [jobDataSet,totalItem])
@@ -54,13 +55,8 @@ export default function ListingPage() {
         }
     }
 
-    const logout = () => {
-        sessionStorage.clear();
-        history.replace('/login')
-    }
-
     const toProfile = () => {
-        history.replace('/user-profile')
+        history.push('/user-profile');
     }
 
     const selecteListFilter = (i) => {
@@ -118,14 +114,17 @@ export default function ListingPage() {
             i=i+200;
         }
         return paginationUI.map((i)=>{
+            let applied = false
+            if (i === paginationPosi) {
+                applied = true
+            }
             return(
                 <Button
-                    border='1px solid hsl(203deg, 85%, 52%)'
-                    bColor='hsl(0, 0%, 100%)'
+                    active={applied}
+                    key={i}
                     onClick={() => getnextSetdata(i)}
                     radius="1rem"
                     padding="0.2rem 1rem"
-                    color='hsl(203deg, 85%, 52%)'
                     margin='0.5rem 0.5rem 0 0'
                     children={i}
                 />
@@ -135,23 +134,21 @@ export default function ListingPage() {
 
     return (
         <React.Fragment>
-            <Header logout={logout} toProfile={toProfile} userImg={userData.userImg} />
+            <Header toProfile={toProfile} userImg={userData.userImg} />
             <div className="listing-wrapper">
                 {!showFilterTab && <Button
-                    border='none'
-                    bColor='hsl(203deg, 85%, 52%)'
+                    active={true}
                     onClick={() => setShowFiltertab(!showFilterTab)}
                     radius="1rem"
                     padding="0.2rem 1rem"
-                    color='hsl(0, 0%, 100%)'
                     children='Filter'
                 />}
                 {showFilterTab && <LanguageSearch showFilterTab={() => setShowFiltertab(false)} language={language} selecteListFilter={selecteListFilter} selectedList={selectedLangList} selectedSalaryFilter={selectedSalaryFilter} selectSalaryFilter={selectSalaryFilter} />}
 
                 {jobData && jobData.length > 0 && jobData.map((i) => {
-                    let appliedText = { text: "Apply", bColor: "hsl(0, 0%, 100%)", border: "1px solid hsl(203deg, 85%, 52%)", color: "hsl(203deg, 85%, 52%)" }
+                    let applied = false
                     if (appliedList.length > 0 && appliedList.indexOf(i.id) >= 0) {
-                        appliedText = { text: "Applied", bColor: "hsl(203deg, 85%, 52%)", border: "none", color: "hsl(0, 0%, 100%)" }
+                        applied = true
                     }
                     return (
                         <div key={i.id} className="listing flex-row content-space-between displayFlex align-center">
@@ -159,13 +156,11 @@ export default function ListingPage() {
                                 <span className="mB1">{i.company} - {i.skills.join(', ')}
                                     {window.innerWidth < 780 && <div style={{ float: "right" }}>
                                         <Button
-                                            border={appliedText.border}
-                                            bColor={appliedText.bColor}
-                                            onClick={() => apply(i.id)}
+                                            active={applied}
+                                            onClick={!applied ? () => apply(i.id):()=>{}}
                                             radius="1rem"
                                             padding="0.2rem 1rem"
-                                            color={appliedText.color}
-                                            children={appliedText.text}
+                                            children={applied ? "Applied" : 'Apply'}
                                             width="5rem"
                                             height="2rem" />
                                     </div>
@@ -185,13 +180,11 @@ export default function ListingPage() {
                             </div>
                             {window.innerWidth > 780 &&
                                 <Button
-                                    border={appliedText.border}
-                                    bColor={appliedText.bColor}
-                                    onClick={() => apply(i.id)}
+                                    active ={applied}
+                                    onClick={!applied ? () => apply(i.id):()=>{}}
                                     radius="1rem"
                                     padding="0.2rem 1rem"
-                                    color={appliedText.color}
-                                    children={appliedText.text}
+                                    children={applied ? "Applied" : 'Apply'}
                                     width="5rem"
                                     height="2rem" />
                             }

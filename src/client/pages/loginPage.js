@@ -139,17 +139,6 @@ export default function LoginPage() {
                             onClick={() => setError("")}
                         />
                     </div>
-                    <div className="content-space-around displayFlex">
-                        <Button
-                            border="none"
-                            bColor="hsl(203deg, 85%, 52%)"
-                            onClick={() => validateForm()}
-                            radius="1rem"
-                            padding="0.5rem 2rem"
-                            color="hsl(0, 0%, 100%)"
-                            children="Login">
-                        </Button>
-                    </div>
                 </Fragment>}
                 {ui === 2 && <Fragment>
                     <div>
@@ -203,7 +192,7 @@ export default function LoginPage() {
                     </div>
                     <div className="mB1"><u><b>Link Account</b></u></div>
                     <div className="mB1 displayFlex">
-                        <label className="flex1">Linked</label>
+                        <label className="flex1">LinkedIn</label>
                         <Input
                             errorType={false}
                             type="url"
@@ -237,19 +226,17 @@ export default function LoginPage() {
                             )
                         })}
                     </div>
-                    <div className="content-space-around displayFlex">
-                        <Button
-                            border="none"
-                            bColor="hsl(203deg, 85%, 52%)"
-                            onClick={() => submitForm()}
-                            radius="1rem"
-                            padding="0.5rem 2rem"
-                            color="hsl(0, 0%, 100%)"
-                            children="Submit">
-                        </Button>
-                    </div>
                 </Fragment>
                 }
+                <div className="content-space-around displayFlex">
+                        <Button
+                            active={true}
+                            onClick={ui === 1 ? () => validateForm():() => submitForm()}
+                            radius="1rem"
+                            padding="0.5rem 2rem"
+                            children={ui === 1 ? "Login" : "Submit"}>
+                        </Button>
+                    </div>
             </div></div>
     );
 }

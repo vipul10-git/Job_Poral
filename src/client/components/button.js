@@ -1,5 +1,5 @@
 import React from "react";
-
+import '../../assets/style/button.css';
 const Button = (props)=> { 
     let { 
         border,
@@ -12,20 +12,21 @@ const Button = (props)=> {
         width,
         height,
         margin,
+        active
       } = props
   return (
     <button 
       onClick={onClick}
+      className={active ? 'activeBtn' :active === false && 'inActiveBtn'}
       style={{
-         backgroundColor: bColor,
+        backgroundColor: bColor,
          border,
-         borderRadius: radius,
+         borderRadius : radius,
          padding,
          color,
          width,
          height,
          margin,
-         boxShadow:"0 0 3px 0 bColor"
       }}
     >
     {children}

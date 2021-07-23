@@ -6,10 +6,11 @@ let initialState = {
   totalItem:0
 }
 export function reducer(state = initialState, action) {
+  console.log(action.payload)
   switch (action.type) {
     case GETDATA:
         let dataX = [];
-        for(let i=action.payload;i<action.payload+199;i++){
+        for(let i=action.payload-1;i<action.payload+199;i++){
             dataX.push(Data[i])
         }
       return {

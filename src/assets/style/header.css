@@ -6,38 +6,15 @@
     position: fixed;
     padding: 0.5rem 0;
     margin-bottom: 1rem;
-    box-shadow: 0 5px 3px 0 hsl(0, 0%, 68%)	;
+    box-shadow: 0 5px 3px 0 var(--grey);
     top:0;
-    background-color: hsl(0,0%, 100%);
-}
-.profileOption{
-    position:fixed ;
-    width:10vw;
-    background: hsl(0deg 0% 99%);
-    top: 3rem;
-    padding: 1rem;
-    cursor: pointer;
-    box-shadow: 0 5px 3px 0 hsl(0, 0%, 68%)	;
-    box-sizing: border-box;
+    background-color: var(--white);
 }
 .logoImg,.user-logo-img{
     width: 32px;
     padding:0 0.5rem ;
     cursor: pointer;
 }
-.profileOption-list:hover{
-    text-decoration: underline;
-}
 .user-logo-img{
     border-radius: 50%;
-}
-@media(min-width:480px){
-    .profileOption{
-        right: 1rem;
-    }
-}
-@media(max-width:480px){
-    .profileOption{
-        width: 100vw;
-    }
 }
