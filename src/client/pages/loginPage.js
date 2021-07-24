@@ -123,6 +123,17 @@ export default function LoginPage() {
         }
     }
 
+    const themeSet = () =>{
+        let theme = localStorage.getItem('selectedTheme');
+        if(theme === 'theme-light'){
+            theme = 'theme-dark'
+        }else{
+            theme = 'theme-light'
+        }
+        localStorage.setItem('selectedTheme',theme);
+        setTheme()
+    }
+
     let { collegeName, collegeLastDate } = collegeInfo
 
     return (
@@ -132,7 +143,7 @@ export default function LoginPage() {
                 <div className="hiringFont">Hiring is Simpler, Smarter & Faster with I</div>
             <Button
                 active={true}
-                onClick={()=>setTheme()}
+                onClick={()=>themeSet()}
                 radius="1rem"
                 padding="0.5rem 2rem"
                 margin ="1rem"
