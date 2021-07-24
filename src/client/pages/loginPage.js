@@ -3,7 +3,8 @@ import Button from "../components/button";
 import Input from "../components/inputBox";
 import "../../assets/style/login.css";
 import { useHistory } from "react-router-dom";
-import LOGO_LARGE from "../../assets/img/logo_large.png"
+import LOGO_LARGE from "../../assets/img/logo_large.png";
+import {setTheme} from'../util/constants';
 let callApi;
 export default function LoginPage() {
     const [email, setEmail] = useState("");
@@ -19,8 +20,10 @@ export default function LoginPage() {
     const [userImg, setUserImg] = useState("");
     const [ui, setUi] = useState(1);
     let history = useHistory();
+    const [theme , setUITheme] = useState('theme-light')
     const inputFile = useRef(null)
     useEffect(() => {
+        setTheme(theme);
         if(sessionStorage.getItem('email')){
             let userdataifavailable = localStorage.getItem(sessionStorage.getItem('email'))
             userdataifavailable = JSON.parse(userdataifavailable);
@@ -80,7 +83,8 @@ export default function LoginPage() {
             name,
             collegeInfo,
             appliedList:[],
-            userExtraData : true
+            userExtraData : true,
+            selectedTheme : theme
         }
         data = { ...data, ...additionalData };
         localStorage.setItem(data.email, JSON.stringify(data))
@@ -120,6 +124,17 @@ export default function LoginPage() {
         }
     }
 
+    const setThemeUI = () =>{
+        
+        if(theme === 'theme-light'){
+            setUITheme('theme-dark')
+            setTheme('theme-dark')
+        }else{
+            setUITheme('theme-light')
+            setTheme('theme-light')
+        }
+    }
+
     let { collegeName, collegeLastDate } = collegeInfo
 
     return (
@@ -127,7 +142,16 @@ export default function LoginPage() {
             <div className="displayFlex flex-column align-center">
                 <img src={LOGO_LARGE} className="login-logo-img mB1" alt="logo" />
                 <div className="hiringFont">Hiring is Simpler, Smarter & Faster with I</div>
+            <Button
+                active={true}
+                onClick={()=>setThemeUI()}
+                radius="1rem"
+                padding="0.5rem 2rem"
+                margin ="1rem"
+                children='change Theme'>
+            </Button>
             </div>
+
             <div className="Login">
                 {ui === 1 && <Fragment>
                     <div className="mB1 displayFlex">

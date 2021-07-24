@@ -8,7 +8,7 @@ import LanguageSearch from '../components/languageSearch';
 import { useDispatch } from 'react-redux';
 import Container from '../../container/dataContainer';
 import { getListingData } from '../../action/action';
-import JobList from '../components/JobList';
+import JobList from '../components/joblist';
 
 export default function ListingPage() {
     const [appliedList, setApplyList] = useState([]);
@@ -43,7 +43,7 @@ export default function ListingPage() {
         let userStoredData = localStorage.getItem(userEmail);
         userStoredData = JSON.parse(userStoredData)
         setUserData(userStoredData)
-        setApplyList(userStoredData.appliedList && [])
+        setApplyList(userStoredData.appliedList || [])
     }, [])
 
     const apply = useCallback((id)=>{

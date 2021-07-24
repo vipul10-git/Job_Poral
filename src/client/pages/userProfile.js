@@ -66,19 +66,24 @@ export default function UserProfile() {
                             {collegeInfo?.collegeLastDate && <tr><th>College Last Date</th><td>{collegeInfo.collegeLastDate}</td></tr>}
                             {linkedIn && <tr><th>LinkedIn</th><td>{linkedIn}</td></tr>}
                             {githubAccName && <tr><th>GitHub</th><td>{githubAccName}</td></tr>}
-                        </tbody>
-                    </table>
+                       
                     {gitProjSelected.length > 0 &&
-                        <div>
-                            <strong>GitHub Project</strong>
+                        <tr>
+                            <th>GitHub Project</th>
+                            <td>
+                                <ul>
                             {gitProjSelected?.map(i => {
                                 return (
-                                    <div key={i.name} style={{cursor:'pointer'}} onClick={() => openGithub(i.gitUrl)}>{i.name}</div>
+                                    <li key={i.name} style={{cursor:'pointer'}} onClick={() => openGithub(i.gitUrl)}>{i.name}</li>
                                 )
                             })
                             }
-                        </div>
+                            </ul>
+                            </td>
+                        </tr>
                     }
+                     </tbody>
+                    </table>
                 </div>
                 }
                 <Button

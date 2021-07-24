@@ -18,8 +18,12 @@ th{
     margin-bottom: 1rem;
     margin-top: 1rem;
 }
+table{
+    height: max-content;
+    margin: auto;
+}
 
-@media (max-width:480px){
+@media (max-width:768px){
     .user-Profile-section {
         flex-direction: column;
     }
