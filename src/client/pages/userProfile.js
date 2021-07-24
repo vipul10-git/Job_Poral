@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import Button from "../components/button";
 import Container from '../../container/dataContainer';
@@ -6,6 +6,7 @@ import { getUserSelectedList, clearReducer } from '../../action/action';
 import { useDispatch } from 'react-redux';
 import '../../assets/style/userProfile.css';
 import JobList from '../components/joblist';
+import Loader from "../components/loader";
 
 export default function UserProfile() {
     const history = useHistory();
@@ -48,6 +49,7 @@ export default function UserProfile() {
         <React.Fragment>
 
             <div className="listing-wrapper">
+                {userData && Object.keys(userData).length <= 0 && <Loader height='50vh'/>}
                 {userData && Object.keys(userData).length > 0 && <div className='user-Profile-section'>
                     <div>
                         {userImg && <img src={userImg} alt='user-img' />}
@@ -67,7 +69,7 @@ export default function UserProfile() {
                             {linkedIn && <tr><th>LinkedIn</th><td>{linkedIn}</td></tr>}
                             {githubAccName && <tr><th>GitHub</th><td>{githubAccName}</td></tr>}
                        
-                    {gitProjSelected.length > 0 &&
+                    {gitProjSelected?.length > 0 &&
                         <tr>
                             <th>GitHub Project</th>
                             <td>

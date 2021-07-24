@@ -110025,7 +110025,3 @@ export const Data = [
   ]
 
 export const language = ["Java","Go","C","C++","JavaScript","HTML","Css","React, php, HTML","Angular","vue","Python","Ruby","Objective-C","php","SQL","Swift"]
-
-export function setTheme(themeName) {
-    document.documentElement.className = themeName;
-}

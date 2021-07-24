@@ -33,16 +33,22 @@
     margin-bottom: 0.5rem;
     background-color: var(--companyColor);
   }
+
   @media (max-width: 480px) {
     .font2x{
       font-size: 0.8rem;
     } 
+    .login-logo-img{
+      width: 22vh;
+      height:22vh;
+    }
   }
   @media (max-width:768px) {
     .login-wrapper{
       flex-direction: column;
       margin: auto;
-      margin-top: 4rem;
+      margin-top: 2rem;
+      height: auto;
     }
     .Login{
       margin: auto;
