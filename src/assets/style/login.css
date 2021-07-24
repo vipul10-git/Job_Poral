@@ -2,7 +2,8 @@
   .Login {
     border-radius: 1rem;
     width:max-content;
-    padding: 5rem ;
+    box-sizing: border-box;
+    padding: 2rem;
     border-top: 1px solid var(--companyColor);
     border-bottom: 1px solid var(--companyColor);
   }

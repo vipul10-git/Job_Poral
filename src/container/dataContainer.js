@@ -1,9 +1,10 @@
-import {useSelector, shallowEqual} from 'react-redux';
+import { useSelector, shallowEqual } from 'react-redux';
 
-export default function DataContainer(){
-  let {jobDataSet, totalItem} = useSelector((state)=>({
-    jobDataSet : state.data,
-    totalItem : state.totalItem
-  }),shallowEqual)
-  return {jobDataSet, totalItem}
+export default function DataContainer() {
+  let { jobDataSet, totalItem, gitHubUserData } = useSelector((state) => ({
+    jobDataSet: state.data,
+    totalItem: state.totalItem,
+    gitHubUserData: state.gitHubUserData
+  }), shallowEqual)
+  return { jobDataSet, totalItem, gitHubUserData }
 }

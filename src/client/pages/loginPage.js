@@ -5,6 +5,10 @@ import "../../assets/style/login.css";
 import { useHistory } from "react-router-dom";
 import LOGO_LARGE from "../../assets/img/logo_large.png";
 import {setTheme} from'../util/constFun';
+import {useDispatch} from 'react-redux';
+import {getUserGithubdata, clearReducer} from '../../action/action';
+import Container from '../../container/dataContainer';
+
 let callApi;
 export default function LoginPage() {
     const [email, setEmail] = useState("");
@@ -21,7 +25,12 @@ export default function LoginPage() {
     const [ui, setUi] = useState(1);
     let history = useHistory();
     const inputFile = useRef(null)
+    const dispatch = useDispatch();
+
+    let {gitHubUserData} = Container();
+
     useEffect(() => {
+        dispatch(clearReducer());
         if(sessionStorage.getItem('email')){
             let userdataifavailable = localStorage.getItem(sessionStorage.getItem('email'))
             userdataifavailable = JSON.parse(userdataifavailable);
@@ -32,6 +41,10 @@ export default function LoginPage() {
             }
         }
     }, [])
+
+    useEffect(() => {
+        setGitHubAcc(gitHubUserData)
+    }, [gitHubUserData])
 
     function validateForm() {
         let emailRex = /\S+@\S+\.\S+/;
@@ -97,13 +110,7 @@ export default function LoginPage() {
     }
 
     const apicall = (data) => {
-        fetch(`https://api.github.com/users/${data}/repos`).then(resp => resp.json()).then(res => {
-            let data = []
-            res.length > 0 && res.forEach(element => {
-                data.push({ name: element.full_name, gitUrl: element.html_url })
-            });
-            setGitHubAcc(data)
-        })
+        dispatch(getUserGithubdata(data));
     }
 
     const opneImageBox = () => {

@@ -1,9 +1,10 @@
-import { GETDATA, GET_USER_SELECT, CLEAR} from '../action/action';
+import { GETDATA, GET_USER_SELECT, CLEAR, GITHUB_USER_SUCCESS} from '../action/action';
 import { Data } from '../client/util/constants';
 
 let initialState = {
   data: [],
-  totalItem: 0
+  totalItem: 0,
+  gitHubUserData : []
 }
 
 export function reducer(state = initialState, action) {
@@ -33,8 +34,14 @@ export function reducer(state = initialState, action) {
       case CLEAR:
         return {
           data: [],
-          totalItem: []
+          totalItem: [],
+          gitHubUserData:[]
         }
+      case GITHUB_USER_SUCCESS:{
+        return{
+          gitHubUserData : action.payload
+        }
+      }
     default:
       return state
   }
