@@ -104,13 +104,9 @@ export default function LoginPage() {
     }
 
     function getGitAccounts(e) {
-        setGithubAccName(e.target.value)
+        setGithubAccName()
         clearTimeout(callApi);
-        callApi = setTimeout(() => apicall(e.target.value), 1000)
-    }
-
-    const apicall = (data) => {
-        dispatch(getUserGithubdata(data));
+        callApi = setTimeout(() => dispatch(getUserGithubdata(e.target.value)), 1000)
     }
 
     const opneImageBox = () => {
