@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect,useCallback} from "react";
 import Button from "../components/button";
 import "../../assets/style/listingPage.css";
 import { language } from "../util/constants";
@@ -8,7 +8,7 @@ import LanguageSearch from '../components/languageSearch';
 import { useDispatch } from 'react-redux';
 import Container from '../../container/dataContainer';
 import { getListingData } from '../../action/action';
-import JobList from '../components/joblist';
+import JobList from '../components/JobList';
 
 export default function ListingPage() {
     const [appliedList, setApplyList] = useState([]);
@@ -46,12 +46,12 @@ export default function ListingPage() {
         setApplyList(userStoredData.appliedList && [])
     }, [])
 
-    function apply(id) {
+    const apply = useCallback((id)=>{
         if (appliedList.indexOf(id) <= 0) {
             setApplyList([...appliedList, id])
             localStorage.setItem(userData.email, JSON.stringify({ ...userData, appliedList: [...appliedList, id] }))
         }
-    }
+    },[appliedList])
 
     const toProfile = () => {
         history.push('/user-profile');

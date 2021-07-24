@@ -73,7 +73,7 @@ export default function UserProfile() {
                             <strong>GitHub Project</strong>
                             {gitProjSelected?.map(i => {
                                 return (
-                                    <div key={i.name} onClick={() => openGithub(i.gitUrl)}>{i.name}</div>
+                                    <div key={i.name} style={{cursor:'pointer'}} onClick={() => openGithub(i.gitUrl)}>{i.name}</div>
                                 )
                             })
                             }

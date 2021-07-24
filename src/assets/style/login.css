@@ -14,7 +14,7 @@
   }
   .login-logo-img{
     width: 30vh;
-    height: auto;
+    height: 30vh;
   }
   .hiringFont{
     font-family: fantasy;
@@ -41,6 +41,7 @@
     .login-wrapper{
       flex-direction: column;
       margin: auto;
+      margin-top: 4rem;
     }
     .Login{
       margin: auto;
