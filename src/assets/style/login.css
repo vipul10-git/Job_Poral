@@ -1,16 +1,15 @@
 
   .Login {
     border-radius: 1rem;
-    width:max-content;
     box-sizing: border-box;
     padding: 2rem;
     border-top: 1px solid var(--companyColor);
     border-bottom: 1px solid var(--companyColor);
   }
+
   .login-wrapper{
     display: flex;
     height: 100vh;
-    flex-direction: row;
     align-items: center;
   }
   .login-logo-img{
@@ -20,7 +19,7 @@
   .hiringFont{
     font-family: fantasy;
     font-size: 1.5rem;
-    width: 22vw;
+    width: 30vh;
     text-align: center;
   }
   .user-img{
@@ -32,13 +31,9 @@
     width: 0.8rem;
     height: 0.8rem;
     margin-bottom: 0.5rem;
-    background-color: var(--companyColor);
   }
 
   @media (max-width: 480px) {
-    .font2x{
-      font-size: 0.8rem;
-    } 
     .login-logo-img{
       width: 22vh;
       height:22vh;
@@ -56,9 +51,6 @@
       margin-top: 0;
       padding: 1rem;
     }
-    .font2x{
-      font-size: 1rem;
-    } 
     .hiringFont{
       width: 90vw;
     }

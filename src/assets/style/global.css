@@ -56,29 +56,17 @@ input:focus{
 .flex1{
   flex: 1;
 }
-.flex2{
-  flex: 2;
-}
 .flex3{
   flex:3
 }
 .content-space-around{
   justify-content: space-around;
 }
-.content-space-between{
-  justify-content: space-between;
-}
-.flex-row{
-  flex-direction: row;
-}
 .flex-column{
   flex-direction: column;
 }
 .align-center{
   align-items: center;
-}
-.textCenter{
-  text-align: center;
 }
 .dummyImage{
   width: 60px;

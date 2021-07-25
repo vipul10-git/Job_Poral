@@ -20,7 +20,7 @@
     color:hsl(0, 0%, 62%);
     font-size: 0.75rem;
     display: inline-block;
-    vertical-align: top;
+    vertical-align: super;
     width: 12rem;
 }
 .bag-icon,.loc-icon{
@@ -28,16 +28,11 @@
     height: 20px;
     height: auto;
 }
-.filterImage{
-    width: 16px;
-    margin: 1rem auto;
-    cursor: pointer;
-    display: flex;;
-}
 
 @media (max-width:760px) {
     .subText{
         width: 6rem;
+        vertical-align: inherit;
     }
     .listing{
         padding: 1rem 0.5rem 0.5rem 0.5rem;

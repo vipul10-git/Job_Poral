@@ -1,6 +1,6 @@
-.user-Profile-section img,.noImg{
-    width: 200px;
-    height: 200px;
+.user-Profile-section img{
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
 }
 
