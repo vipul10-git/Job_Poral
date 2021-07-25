@@ -70,13 +70,14 @@ export default function ListingPage() {
         setSelectedSalaryFilter(0)
         setSelectedSortList(filteredSearchData);
         if (filteredSearchData.length > 0) {
-            dataSet.forEach(element => {
-                for (let i = 0; i < filteredSearchData.length; i++) {
-                    if (element.skills.includes(filteredSearchData[i])) {
-                        filteredData.push(element)
+            filteredData = dataSet.reduce((acc,curr,)=>{
+                filteredSearchData.map(ele=>{
+                    if (curr.skills.includes(ele)) {
+                        acc.push(curr)
                     }
-                }
-            })
+                })
+                return acc;
+            },[])
             setJobData([...new Set(filteredData)]);
         } else {
             setJobData(jobDataSet)
