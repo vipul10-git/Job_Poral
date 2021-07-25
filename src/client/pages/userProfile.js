@@ -7,6 +7,7 @@ import { useDispatch } from 'react-redux';
 import '../../assets/style/userProfile.css';
 import JobList from '../components/joblist';
 import Loader from "../components/loader";
+import dummyImage from "../../assets/img/dummyUser.png"
 
 export default function UserProfile() {
     const history = useHistory();
@@ -52,8 +53,7 @@ export default function UserProfile() {
                 {userData && Object.keys(userData).length <= 0 && <Loader height='50vh'/>}
                 {userData && Object.keys(userData).length > 0 && <div className='user-Profile-section'>
                     <div>
-                        {userImg && <img src={userImg} alt='user-img' />}
-                        {!userImg && <div className='dummyImage noImg'>No image</div>}
+                        <img src={userImg ? userImg : dummyImage} alt='user-img' className='mB1' />
                         <table>
                             <tbody>
                                 {name ? <tr><th>Name</th><td>{name}</td></tr> : null}
