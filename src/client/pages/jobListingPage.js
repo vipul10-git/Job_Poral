@@ -1,4 +1,4 @@
-import React, { useState, useEffect,useCallback} from "react";
+import React, { useState, useEffect,useCallback, Fragment} from "react";
 import Button from "../components/button";
 import "../../assets/style/listingPage.css";
 import { language } from "../util/constants";
@@ -9,6 +9,8 @@ import { useDispatch } from 'react-redux';
 import Container from '../../container/dataContainer';
 import { getListingData } from '../../action/action';
 import JobList from '../components/joblist';
+import Pagination from '../components/Pagination';
+import Loader from "../components/loader";
 
 export default function ListingPage() {
     const [appliedList, setApplyList] = useState([]);
@@ -53,10 +55,6 @@ export default function ListingPage() {
         }
     },[appliedList])
 
-    const toProfile = () => {
-        history.push('/user-profile');
-    }
-
     const selecteListFilter = (i) => {
         let filteredSearchData = [];
         let filteredData = [];
@@ -70,7 +68,7 @@ export default function ListingPage() {
         setSelectedSalaryFilter(0)
         setSelectedSortList(filteredSearchData);
         if (filteredSearchData.length > 0) {
-            filteredData = dataSet.reduce((acc,curr,)=>{
+            filteredData =dataSet.reduce((acc,curr,)=>{
                 filteredSearchData.map(ele=>{
                     if (curr.skills.includes(ele)) {
                         acc.push(curr)
@@ -105,35 +103,9 @@ export default function ListingPage() {
         dispatch(getListingData(position))
     }
 
-    const pagination = () => {
-        let paginationUI = [];
-        let i=1
-        while(i<totalData){
-            paginationUI.push(i);
-            i=i+200;
-        }
-        return paginationUI.map((i)=>{
-            let applied = false
-            if (i === paginationPosi) {
-                applied = true
-            }
-            return(
-                <Button
-                    active={applied}
-                    key={i}
-                    onClick={() => getnextSetdata(i)}
-                    radius="1rem"
-                    padding="0.2rem 1rem"
-                    margin='0.5rem 0.5rem 0 0'
-                    children={i}
-                />
-            )
-        })
-    }
-
     return (
-        <React.Fragment>
-            <Header toProfile={toProfile} userImg={userData.userImg} />
+        <Fragment>
+            <Header toProfile={()=>history.push('/user-profile')} userImg={userData.userImg} />
             <div className="listing-wrapper">
                 {!showFilterTab && <Button
                     active={true}
@@ -143,9 +115,10 @@ export default function ListingPage() {
                     children='Filter'
                 />}
                 {showFilterTab && <LanguageSearch showFilterTab={() => setShowFiltertab(false)} language={language} selecteListFilter={selecteListFilter} selectedList={selectedLangList} selectedSalaryFilter={selectedSalaryFilter} selectSalaryFilter={selectSalaryFilter} />}
+                {jobData && jobData.length <= 0 && <Loader height='90vh'/>}
                 <JobList jobData={jobData} btnReq={true} apply={apply} appliedList={appliedList} />
-                {pagination()}
+                <Pagination  getnextSetdata={getnextSetdata} totalData={totalData} length={200} paginationPosi={paginationPosi}/>
             </div>
-        </React.Fragment>
+        </Fragment>
     );
 }

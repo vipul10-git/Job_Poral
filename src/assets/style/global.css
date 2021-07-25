@@ -94,7 +94,7 @@ input:focus{
   width: 2rem;
   height: 2rem;
   border:10px solid var(--companyColor);
-  animation: spin 2.5s linear infinite;
+  animation: spin 2s linear infinite;
 }
 .loader-container{
   display: grid;

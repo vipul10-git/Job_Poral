@@ -104,7 +104,7 @@ export default function LoginPage() {
     }
 
     function getGitAccounts(e) {
-        setGithubAccName()
+        setGithubAccName(e.target.value)
         clearTimeout(callApi);
         callApi = setTimeout(() => dispatch(getUserGithubdata(e.target.value)), 1000)
     }

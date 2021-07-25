@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import Button from "../components/button";
 import Container from '../../container/dataContainer';
@@ -46,7 +46,7 @@ export default function UserProfile() {
     let { userImg, name, mobile, githubAccName, email, linkedIn, gitProjSelected, collegeInfo } = userData;
 
     return (
-        <React.Fragment>
+        <Fragment>
 
             <div className="listing-wrapper">
                 {userData && Object.keys(userData).length <= 0 && <Loader height='50vh'/>}
@@ -56,18 +56,18 @@ export default function UserProfile() {
                         {!userImg && <div className='dummyImage noImg'>No image</div>}
                         <table>
                             <tbody>
-                                {name && <tr><th>Name</th><td>{name}</td></tr>}
-                                {mobile && <tr><th>Mobile No.</th><td>{mobile}</td></tr>}
-                                {email && <tr><th>Email</th><td>{email}</td></tr>}
+                                {name ? <tr><th>Name</th><td>{name}</td></tr> : null}
+                                {mobile ? <tr><th>Mobile No.</th><td>{mobile}</td></tr>  : null}
+                                {email ? <tr><th>Email</th><td>{email}</td></tr>  : null}
                             </tbody>
                         </table>
                     </div>
                     <table>
                         <tbody>
-                            {collegeInfo?.collegeName && <tr><th>College Name</th><td>{collegeInfo.collegeName}</td></tr>}
-                            {collegeInfo?.collegeLastDate && <tr><th>College Last Date</th><td>{collegeInfo.collegeLastDate}</td></tr>}
-                            {linkedIn && <tr><th>LinkedIn</th><td>{linkedIn}</td></tr>}
-                            {githubAccName && <tr><th>GitHub</th><td>{githubAccName}</td></tr>}
+                            {collegeInfo?.collegeName ?<tr><th>College Name</th><td>{collegeInfo.collegeName}</td></tr>:null}
+                            {collegeInfo?.collegeLastDate ? <tr><th>College Last Date</th><td>{collegeInfo.collegeLastDate}</td></tr> : null}
+                            {linkedIn ? <tr><th>LinkedIn</th><td>{linkedIn}</td></tr> : null}
+                            {githubAccName ? <tr><th>GitHub</th><td>{githubAccName}</td></tr> : null}
                        
                     {gitProjSelected?.length > 0 &&
                         <tr>
@@ -103,6 +103,6 @@ export default function UserProfile() {
                 <JobList jobData={jobData} btnReq={false} />
             </div>
 
-        </React.Fragment>
+        </Fragment>
     );
 }
